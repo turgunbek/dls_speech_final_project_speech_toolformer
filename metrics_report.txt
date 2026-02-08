@@ -1,0 +1,11 @@
+========================================
+FINAL METRICS REPORT
+========================================
+
+Pipeline A (Text Oracle):  98.63% Accuracy
+Pipeline C (Direct Audio): 70.65% Accuracy
+Pipeline D (Cascaded):     55.58% Accuracy
+
+Pipeline B (ASR Quality):  103.37% WER
+
+Direct pipeline outperforms cascaded by 15.07% accuracy.
