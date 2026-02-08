@@ -19,7 +19,8 @@
 2. Получил синтезированные аудио с помощью xtts-v2
 3. Подготовил манифест-файл
 4. Сгруппировал эксперименты A, B, C, D в один скрипт
-5. Анализ результатов
+5. Подсчет метрик
+6. Анализ результатов
 
 
 ---
@@ -90,6 +91,18 @@ Rerun experiments:
 python run_omni_project_v2.py
 ```
 Получил файл `results_omni_7b_v2.json`, где уже нет "PARSE_ERROR"
+
+## Фаза 3: Подсчет метрик
+
+```
+pip install jiwer
+pip install num2words
+```
+
+Calculate metrics:
+```
+python calculate_metrics.py
+```
 
 ## Результат
 ```
