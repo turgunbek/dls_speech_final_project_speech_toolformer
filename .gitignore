@@ -1,0 +1,11 @@
+# Ignore everything by default
+*
+
+# But keep this file
+!.gitignore
+
+# And keep only the 4 required files
+!wavs_Cameron_Russell_115.zip
+!generated_dataset.json
+!Cameron_Russell-chunk-38.wav
+!dataset_audio_Cameron_Russell_115.json

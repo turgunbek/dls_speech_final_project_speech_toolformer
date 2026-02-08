@@ -1,0 +1,4963 @@
+[
+  {
+    "text": "Send fifty bucks to Alex",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Alex",
+        "amount": 50.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0000.wav"
+  },
+  {
+    "text": "Transfer 50 to Mom",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Mom",
+        "amount": 50.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0001.wav"
+  },
+  {
+    "text": "Could you please send one hundred dollars to Alice?",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Alice",
+        "amount": 100.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0002.wav"
+  },
+  {
+    "text": "Shoot 20 bucks to Mike",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Mike",
+        "amount": 20.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0003.wav"
+  },
+  {
+    "text": "I need to pay the rent, send 1500 to the Landlord",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Landlord",
+        "amount": 1500.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0004.wav"
+  },
+  {
+    "text": "Send 2.5k to David Smith",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "David Smith",
+        "amount": 2500.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0005.wav"
+  },
+  {
+    "text": "Please transfer five hundred bucks to Sarah",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Sarah",
+        "amount": 500.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0006.wav"
+  },
+  {
+    "text": "Move half a grand to Dad",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Dad",
+        "amount": 500.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0007.wav"
+  },
+  {
+    "text": "Pay John twenty euros",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "John",
+        "amount": 20.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0008.wav"
+  },
+  {
+    "text": "Can you wire 75 dollars to Michael?",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Michael",
+        "amount": 75.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0009.wav"
+  },
+  {
+    "text": "Send 1,200 to Bro",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Bro",
+        "amount": 1200.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0010.wav"
+  },
+  {
+    "text": "Transfer ninety-nine dollars to Emma",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Emma",
+        "amount": 99.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0011.wav"
+  },
+  {
+    "text": "Shoot a hundred and fifty bucks to Hubby",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Hubby",
+        "amount": 150.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0012.wav"
+  },
+  {
+    "text": "Please send 300 pounds to Wifey",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Wifey",
+        "amount": 300.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0013.wav"
+  },
+  {
+    "text": "Send ten dollars to Grandma",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Grandma",
+        "amount": 10.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0014.wav"
+  },
+  {
+    "text": "Transfer 0.5k to Tom",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Tom",
+        "amount": 500.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0015.wav"
+  },
+  {
+    "text": "Could you move two thousand dollars to Robert Brown",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Robert Brown",
+        "amount": 2000.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0016.wav"
+  },
+  {
+    "text": "Pay the babysitter, send 80 to Lily",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Lily",
+        "amount": 80.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0017.wav"
+  },
+  {
+    "text": "Please shoot 45 bucks over to Jake",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Jake",
+        "amount": 45.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0018.wav"
+  },
+  {
+    "text": "Send a grand to Mom",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Mom",
+        "amount": 1000.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0019.wav"
+  },
+  {
+    "text": "How much money do I have left this month?",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0020.wav"
+  },
+  {
+    "text": "I spent fifty dollars on groceries today.",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0021.wav"
+  },
+  {
+    "text": "What's the exchange rate for euros to dollars?",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0022.wav"
+  },
+  {
+    "text": "Remind me to pay rent tomorrow.",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0023.wav"
+  },
+  {
+    "text": "Transfer money is expensive these days.",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0024.wav"
+  },
+  {
+    "text": "Send 250 to Sarah Connor",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Sarah Connor",
+        "amount": 250.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0025.wav"
+  },
+  {
+    "text": "Could you please transfer three hundred and fifty dollars to Kevin",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Kevin",
+        "amount": 350.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0026.wav"
+  },
+  {
+    "text": "Shoot 5 bucks to Sam",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Sam",
+        "amount": 5.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0027.wav"
+  },
+  {
+    "text": "Pay Mom half a thousand dollars",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Mom",
+        "amount": 500.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0028.wav"
+  },
+  {
+    "text": "Send twenty-five dollars to Nick",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Nick",
+        "amount": 25.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0029.wav"
+  },
+  {
+    "text": "Please move 4k to the Contractor",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Contractor",
+        "amount": 4000.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0030.wav"
+  },
+  {
+    "text": "Transfer sixty dollars to Olivia",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Olivia",
+        "amount": 60.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0031.wav"
+  },
+  {
+    "text": "Send 12.75 to Alex",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Alex",
+        "amount": 12.75
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0032.wav"
+  },
+  {
+    "text": "Can you send seven hundred bucks to Chris",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Chris",
+        "amount": 700.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0033.wav"
+  },
+  {
+    "text": "Pay 2 grand to the Mechanic",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Mechanic",
+        "amount": 2000.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0034.wav"
+  },
+  {
+    "text": "Shoot eighty pounds to Paul",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Paul",
+        "amount": 80.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0035.wav"
+  },
+  {
+    "text": "Please transfer 1.5k to David",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "David",
+        "amount": 1500.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0036.wav"
+  },
+  {
+    "text": "Send a hundred to Dad",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Dad",
+        "amount": 100.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0037.wav"
+  },
+  {
+    "text": "Move 30 dollars to Zoe",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Zoe",
+        "amount": 30.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0038.wav"
+  },
+  {
+    "text": "Transfer nine dollars to Ben",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Ben",
+        "amount": 9.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0039.wav"
+  },
+  {
+    "text": "I need to save 500 dollars this month.",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0040.wav"
+  },
+  {
+    "text": "Did I already send money to John?",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0041.wav"
+  },
+  {
+    "text": "Show me my last transactions.",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0042.wav"
+  },
+  {
+    "text": "The rent is 1500 dollars, due Friday.",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0043.wav"
+  },
+  {
+    "text": "Can you calculate 20 percent of 300?",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0044.wav"
+  },
+  {
+    "text": "Send forty dollars to Amy",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Amy",
+        "amount": 40.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0045.wav"
+  },
+  {
+    "text": "Please shoot 600 bucks to Uncle Bob",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Uncle Bob",
+        "amount": 600.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0046.wav"
+  },
+  {
+    "text": "Transfer 18 euros to Nina",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Nina",
+        "amount": 18.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0047.wav"
+  },
+  {
+    "text": "Move one thousand two hundred dollars to Mark",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Mark",
+        "amount": 1200.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0048.wav"
+  },
+  {
+    "text": "Send 75.5 to Laura",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Laura",
+        "amount": 75.5
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0049.wav"
+  },
+  {
+    "text": "Yo, shoot 30 bucks to Jake real quick",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Jake",
+        "amount": 30.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0050.wav"
+  },
+  {
+    "text": "Can you toss a hundred to Mom?",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Mom",
+        "amount": 100.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0051.wav"
+  },
+  {
+    "text": "Slide 250 to Sarah for the tickets",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Sarah",
+        "amount": 250.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0052.wav"
+  },
+  {
+    "text": "Fire off 2k to the Realtor",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Realtor",
+        "amount": 2000.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0053.wav"
+  },
+  {
+    "text": "Send fifty to Bro, I owe him lunch",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Bro",
+        "amount": 50.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0054.wav"
+  },
+  {
+    "text": "Drop half a grand on Dad's account",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Dad",
+        "amount": 500.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0055.wav"
+  },
+  {
+    "text": "Wire 75 bucks to Mike ASAP",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Mike",
+        "amount": 75.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0056.wav"
+  },
+  {
+    "text": "Kick 20 euros over to Nina",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Nina",
+        "amount": 20.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0057.wav"
+  },
+  {
+    "text": "Send a cool 1k to Wifey",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Wifey",
+        "amount": 1000.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0058.wav"
+  },
+  {
+    "text": "Push 3.5k to David Smith for the project",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "David Smith",
+        "amount": 3500.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0059.wav"
+  },
+  {
+    "text": "Shoot ten bucks to Alex",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Alex",
+        "amount": 10.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0060.wav"
+  },
+  {
+    "text": "Flip 90 dollars to Emma",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Emma",
+        "amount": 90.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0061.wav"
+  },
+  {
+    "text": "Send 2.5k to the Contractor dude",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Contractor",
+        "amount": 2500.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0062.wav"
+  },
+  {
+    "text": "Throw 45 bucks at Sam",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Sam",
+        "amount": 45.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0063.wav"
+  },
+  {
+    "text": "Pay the nanny, slide 120 to Lily",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Lily",
+        "amount": 120.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0064.wav"
+  },
+  {
+    "text": "Send 600 smackers to Uncle Bob",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Uncle Bob",
+        "amount": 600.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0065.wav"
+  },
+  {
+    "text": "Move a grand and a half to Mark",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Mark",
+        "amount": 1500.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0066.wav"
+  },
+  {
+    "text": "Can you sling 35 bucks to Zoe?",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Zoe",
+        "amount": 35.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0067.wav"
+  },
+  {
+    "text": "Send 80 quid to Paul",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Paul",
+        "amount": 80.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0068.wav"
+  },
+  {
+    "text": "Drop 12.5 on Chris",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Chris",
+        "amount": 12.5
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0069.wav"
+  },
+  {
+    "text": "Man, everything costs like 500 bucks now",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0070.wav"
+  },
+  {
+    "text": "Did I already pay Mike back?",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0071.wav"
+  },
+  {
+    "text": "How much did I blow on food last week?",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0072.wav"
+  },
+  {
+    "text": "Transfers be slow lately, huh",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0073.wav"
+  },
+  {
+    "text": "Remind me to send money later",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0074.wav"
+  },
+  {
+    "text": "Yo, send two hundred to Kevin",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Kevin",
+        "amount": 200.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0075.wav"
+  },
+  {
+    "text": "Flick 70 dollars over to Ben",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Ben",
+        "amount": 70.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0076.wav"
+  },
+  {
+    "text": "Push 4k to the Mechanic, please",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Mechanic",
+        "amount": 4000.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0077.wav"
+  },
+  {
+    "text": "Send twenty-five bucks to Nick",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Nick",
+        "amount": 25.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0078.wav"
+  },
+  {
+    "text": "Zap 5 dollars to Tom",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Tom",
+        "amount": 5.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0079.wav"
+  },
+  {
+    "text": "Slide 300 to Grandma",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Grandma",
+        "amount": 300.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0080.wav"
+  },
+  {
+    "text": "Send 1.2k to Robert Brown",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Robert Brown",
+        "amount": 1200.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0081.wav"
+  },
+  {
+    "text": "Shoot ninety bucks to Olivia",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Olivia",
+        "amount": 90.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0082.wav"
+  },
+  {
+    "text": "Drop a cool 2 grand to the Landlord",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Landlord",
+        "amount": 2000.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0083.wav"
+  },
+  {
+    "text": "Fire 18 euros to Anna",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Anna",
+        "amount": 18.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0084.wav"
+  },
+  {
+    "text": "Send 400 bones to Jake",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Jake",
+        "amount": 400.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0085.wav"
+  },
+  {
+    "text": "Move 65 bucks to Laura",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Laura",
+        "amount": 65.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0086.wav"
+  },
+  {
+    "text": "Yo, what's my balance right now?",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0087.wav"
+  },
+  {
+    "text": "I gotta save like 2k this month",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0088.wav"
+  },
+  {
+    "text": "Money's tight after dropping 800 on rent",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0089.wav"
+  },
+  {
+    "text": "Can you show me my recent transfers?",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0090.wav"
+  },
+  {
+    "text": "Is sending money free on weekends?",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0091.wav"
+  },
+  {
+    "text": "Send 55 dollars to Amy",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Amy",
+        "amount": 55.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0092.wav"
+  },
+  {
+    "text": "Slide half a stack to Hubby",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Hubby",
+        "amount": 500.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0093.wav"
+  },
+  {
+    "text": "Push 22 bucks to Pete",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Pete",
+        "amount": 22.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0094.wav"
+  },
+  {
+    "text": "Send 3k to the Builder",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Builder",
+        "amount": 3000.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0095.wav"
+  },
+  {
+    "text": "Send 10.50 to Alex",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Alex",
+        "amount": 10.5
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0096.wav"
+  },
+  {
+    "text": "Transfer 25.75 dollars to Mom",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Mom",
+        "amount": 25.75
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0097.wav"
+  },
+  {
+    "text": "Shoot 99.99 bucks to Mike",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Mike",
+        "amount": 99.99
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0098.wav"
+  },
+  {
+    "text": "Can you send 12.30 to Sarah?",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Sarah",
+        "amount": 12.3
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0099.wav"
+  },
+  {
+    "text": "Pay the cafe bill, move 18.60 to John",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "John",
+        "amount": 18.6
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0100.wav"
+  },
+  {
+    "text": "Slide 7.25 over to Bro",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Bro",
+        "amount": 7.25
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0101.wav"
+  },
+  {
+    "text": "Send 150.45 dollars to David Smith",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "David Smith",
+        "amount": 150.45
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0102.wav"
+  },
+  {
+    "text": "Transfer 2.75 euros to Nina",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Nina",
+        "amount": 2.75
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0103.wav"
+  },
+  {
+    "text": "Shoot 45.00 to Dad",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Dad",
+        "amount": 45.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0104.wav"
+  },
+  {
+    "text": "Send 300.10 to Wifey",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Wifey",
+        "amount": 300.1
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0105.wav"
+  },
+  {
+    "text": "Move 0.99 to Tom",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Tom",
+        "amount": 0.99
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0106.wav"
+  },
+  {
+    "text": "Can you wire 75.80 bucks to Emma?",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Emma",
+        "amount": 75.8
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0107.wav"
+  },
+  {
+    "text": "Send 1200.50 to the Landlord",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Landlord",
+        "amount": 1200.5
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0108.wav"
+  },
+  {
+    "text": "Pay 33.33 to Kevin",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Kevin",
+        "amount": 33.33
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0109.wav"
+  },
+  {
+    "text": "Shoot 8.40 euros to Anna",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Anna",
+        "amount": 8.4
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0110.wav"
+  },
+  {
+    "text": "Transfer 56.70 dollars to Uncle Bob",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Uncle Bob",
+        "amount": 56.7
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0111.wav"
+  },
+  {
+    "text": "Send 19.95 to Jake",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Jake",
+        "amount": 19.95
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0112.wav"
+  },
+  {
+    "text": "Move 250.00 to Grandma",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Grandma",
+        "amount": 250.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0113.wav"
+  },
+  {
+    "text": "Slide 6.66 to Sam",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Sam",
+        "amount": 6.66
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0114.wav"
+  },
+  {
+    "text": "Send 88.88 bucks to Chris",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Chris",
+        "amount": 88.88
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0115.wav"
+  },
+  {
+    "text": "I spent 10.50 on coffee this morning",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0116.wav"
+  },
+  {
+    "text": "Why are all prices ending with .99?",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0117.wav"
+  },
+  {
+    "text": "My balance dropped by 250.75 yesterday",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0118.wav"
+  },
+  {
+    "text": "Is 19.99 considered cheap these days?",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0119.wav"
+  },
+  {
+    "text": "Show me transactions above 100.00",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0120.wav"
+  },
+  {
+    "text": "Send 42.42 to Mark",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Mark",
+        "amount": 42.42
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0121.wav"
+  },
+  {
+    "text": "Transfer 500.55 dollars to Robert Brown",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Robert Brown",
+        "amount": 500.55
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0122.wav"
+  },
+  {
+    "text": "Shoot 3.14 to Pete",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Pete",
+        "amount": 3.14
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0123.wav"
+  },
+  {
+    "text": "Send 27.80 euros to Paul",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Paul",
+        "amount": 27.8
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0124.wav"
+  },
+  {
+    "text": "Move 64.00 to Laura",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Laura",
+        "amount": 64.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0125.wav"
+  },
+  {
+    "text": "Can you pay 9.50 to Ben?",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Ben",
+        "amount": 9.5
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0126.wav"
+  },
+  {
+    "text": "Send 1000.01 to the Builder",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Builder",
+        "amount": 1000.01
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0127.wav"
+  },
+  {
+    "text": "Transfer 14.20 to Zoe",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Zoe",
+        "amount": 14.2
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0128.wav"
+  },
+  {
+    "text": "Shoot 5.05 to Hubby",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Hubby",
+        "amount": 5.05
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0129.wav"
+  },
+  {
+    "text": "Send 72.60 dollars to Amy",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Amy",
+        "amount": 72.6
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0130.wav"
+  },
+  {
+    "text": "Move 0.50 to Nick",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Nick",
+        "amount": 0.5
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0131.wav"
+  },
+  {
+    "text": "Pay 199.95 to the Mechanic",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Mechanic",
+        "amount": 199.95
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0132.wav"
+  },
+  {
+    "text": "Send 34.10 to Lily",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Lily",
+        "amount": 34.1
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0133.wav"
+  },
+  {
+    "text": "Slide 81.25 to Olivia",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Olivia",
+        "amount": 81.25
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0134.wav"
+  },
+  {
+    "text": "Money feels tighter after that 75.80 charge",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0135.wav"
+  },
+  {
+    "text": "Is 0.99 really a discount?",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0136.wav"
+  },
+  {
+    "text": "I need to budget down to the cents now",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0137.wav"
+  },
+  {
+    "text": "Show me expenses with decimals",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0138.wav"
+  },
+  {
+    "text": "That invoice was exactly 333.33 dollars",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0139.wav"
+  },
+  {
+    "text": "Send 16.16 to Ron",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Ron",
+        "amount": 16.16
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0140.wav"
+  },
+  {
+    "text": "Transfer 58.90 to the Plumber",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Plumber",
+        "amount": 58.9
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0141.wav"
+  },
+  {
+    "text": "Shoot 11.11 bucks to Carl",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Carl",
+        "amount": 11.11
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0142.wav"
+  },
+  {
+    "text": "Send 75 to Mom real quick",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Mom",
+        "amount": 75.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0143.wav"
+  },
+  {
+    "text": "Can you shoot 220 bucks to Alex for the hotel?",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Alex",
+        "amount": 220.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0144.wav"
+  },
+  {
+    "text": "Transfer 1.75k to David Smith",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "David Smith",
+        "amount": 1750.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0145.wav"
+  },
+  {
+    "text": "Slide 40 dollars over to Bro",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Bro",
+        "amount": 40.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0146.wav"
+  },
+  {
+    "text": "Please send 18.90 to Sarah",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Sarah",
+        "amount": 18.9
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0147.wav"
+  },
+  {
+    "text": "Kick 300 to the Electrician",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Electrician",
+        "amount": 300.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0148.wav"
+  },
+  {
+    "text": "Drop 7.80 on Jake",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Jake",
+        "amount": 7.8
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0149.wav"
+  },
+  {
+    "text": "Send half a grand to Dad for repairs",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Dad",
+        "amount": 500.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0150.wav"
+  },
+  {
+    "text": "Move 95.25 to Emma",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Emma",
+        "amount": 95.25
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0151.wav"
+  },
+  {
+    "text": "Shoot 2k to the Landlord",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Landlord",
+        "amount": 2000.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0152.wav"
+  },
+  {
+    "text": "Send 12 bucks to Nick",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Nick",
+        "amount": 12.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0153.wav"
+  },
+  {
+    "text": "Transfer 640.40 to Robert Brown",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Robert Brown",
+        "amount": 640.4
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0154.wav"
+  },
+  {
+    "text": "Slide 22.22 to Sam",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Sam",
+        "amount": 22.22
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0155.wav"
+  },
+  {
+    "text": "Send 5 euros to Nina",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Nina",
+        "amount": 5.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0156.wav"
+  },
+  {
+    "text": "Pay the cleaner, move 80.00 to Lily",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Lily",
+        "amount": 80.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0157.wav"
+  },
+  {
+    "text": "Throw 150 bucks to Hubby",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Hubby",
+        "amount": 150.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0158.wav"
+  },
+  {
+    "text": "Send 1.1k to the Contractor",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Contractor",
+        "amount": 1100.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0159.wav"
+  },
+  {
+    "text": "Can you push 66.60 to Paul?",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Paul",
+        "amount": 66.6
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0160.wav"
+  },
+  {
+    "text": "Shoot 28 dollars to Ben",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Ben",
+        "amount": 28.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0161.wav"
+  },
+  {
+    "text": "Drop 3.33 on Tom",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Tom",
+        "amount": 3.33
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0162.wav"
+  },
+  {
+    "text": "I already spent 400 on groceries this week",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0163.wav"
+  },
+  {
+    "text": "Why is my balance always under 100?",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0164.wav"
+  },
+  {
+    "text": "Did rent go up again?",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0165.wav"
+  },
+  {
+    "text": "Show me last month's expenses",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0166.wav"
+  },
+  {
+    "text": "Money apps keep changing their UI",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0167.wav"
+  },
+  {
+    "text": "Send 44.44 to Amy",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Amy",
+        "amount": 44.44
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0168.wav"
+  },
+  {
+    "text": "Transfer a grand to Grandma",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Grandma",
+        "amount": 1000.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0169.wav"
+  },
+  {
+    "text": "Shoot 19.10 to Chris",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Chris",
+        "amount": 19.1
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0170.wav"
+  },
+  {
+    "text": "Send 2.25k to the Builder",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Builder",
+        "amount": 2250.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0171.wav"
+  },
+  {
+    "text": "Move 87.70 to Laura",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Laura",
+        "amount": 87.7
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0172.wav"
+  },
+  {
+    "text": "Slide 15.15 to Zoe",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Zoe",
+        "amount": 15.15
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0173.wav"
+  },
+  {
+    "text": "Send 420 bucks to Mike",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Mike",
+        "amount": 420.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0174.wav"
+  },
+  {
+    "text": "Pay 199.99 to the Mechanic",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Mechanic",
+        "amount": 199.99
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0175.wav"
+  },
+  {
+    "text": "Kick 8.88 to Pete",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Pete",
+        "amount": 8.88
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0176.wav"
+  },
+  {
+    "text": "Send 32.00 to Carl",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Carl",
+        "amount": 32.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0177.wav"
+  },
+  {
+    "text": "Move 555.55 to Mark",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Mark",
+        "amount": 555.55
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0178.wav"
+  },
+  {
+    "text": "Send 6.50 to Ron",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Ron",
+        "amount": 6.5
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0179.wav"
+  },
+  {
+    "text": "Shoot 1.25k to Uncle Bob",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Uncle Bob",
+        "amount": 1250.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0180.wav"
+  },
+  {
+    "text": "Drop 70 euros on Anna",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Anna",
+        "amount": 70.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0181.wav"
+  },
+  {
+    "text": "Send 14.99 to Olivia",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Olivia",
+        "amount": 14.99
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0182.wav"
+  },
+  {
+    "text": "I need to cut spending this month",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0183.wav"
+  },
+  {
+    "text": "Why do transfers take so long sometimes?",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0184.wav"
+  },
+  {
+    "text": "That bill was way higher than expected",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0185.wav"
+  },
+  {
+    "text": "Can you calculate my monthly savings?",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0186.wav"
+  },
+  {
+    "text": "Prices keep creeping up everywhere",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0187.wav"
+  },
+  {
+    "text": "Send 21.21 to the Plumber",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Plumber",
+        "amount": 21.21
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0188.wav"
+  },
+  {
+    "text": "Shoot 13.37 to Alex for snacks",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Alex",
+        "amount": 13.37
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0189.wav"
+  },
+  {
+    "text": "Can you slide 240.60 to Mom today?",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Mom",
+        "amount": 240.6
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0190.wav"
+  },
+  {
+    "text": "Transfer 875.25 to David Johnson",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "David Johnson",
+        "amount": 875.25
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0191.wav"
+  },
+  {
+    "text": "Send 19.80 bucks over to Bro",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Bro",
+        "amount": 19.8
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0192.wav"
+  },
+  {
+    "text": "Drop 2.2k to the Property Manager",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Property Manager",
+        "amount": 2200.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0193.wav"
+  },
+  {
+    "text": "Please push 64.95 to Sarah",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Sarah",
+        "amount": 64.95
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0194.wav"
+  },
+  {
+    "text": "Fire 9.99 to Mike real quick",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Mike",
+        "amount": 9.99
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0195.wav"
+  },
+  {
+    "text": "Send 1.05k to the Designer",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Designer",
+        "amount": 1050.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0196.wav"
+  },
+  {
+    "text": "Move 88.10 to Emma",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Emma",
+        "amount": 88.1
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0197.wav"
+  },
+  {
+    "text": "Kick 27.45 euros to Luca",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Luca",
+        "amount": 27.45
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0198.wav"
+  },
+  {
+    "text": "Send 400.00 to Dad for the tires",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Dad",
+        "amount": 400.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0199.wav"
+  },
+  {
+    "text": "Slide 14.70 to Nina",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Nina",
+        "amount": 14.7
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0200.wav"
+  },
+  {
+    "text": "Transfer 2.05k to the Lawyer",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Lawyer",
+        "amount": 2050.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0201.wav"
+  },
+  {
+    "text": "Shoot 61.11 bucks to Chris",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Chris",
+        "amount": 61.11
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0202.wav"
+  },
+  {
+    "text": "Send 5.75 to Tom for parking",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Tom",
+        "amount": 5.75
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0203.wav"
+  },
+  {
+    "text": "Drop 990.90 on the Insurance Agent",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Insurance Agent",
+        "amount": 990.9
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0204.wav"
+  },
+  {
+    "text": "Move 23.00 to Ben",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Ben",
+        "amount": 23.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0205.wav"
+  },
+  {
+    "text": "Send 77.77 to Amy",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Amy",
+        "amount": 77.77
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0206.wav"
+  },
+  {
+    "text": "Push 3k to the Roofing Guy",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Roofing Guy",
+        "amount": 3000.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0207.wav"
+  },
+  {
+    "text": "Shoot 16.40 to Laura",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Laura",
+        "amount": 16.4
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0208.wav"
+  },
+  {
+    "text": "I dropped 120.30 on groceries yesterday",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0209.wav"
+  },
+  {
+    "text": "Why is my paycheck always late?",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0210.wav"
+  },
+  {
+    "text": "Show me my balance after rent",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0211.wav"
+  },
+  {
+    "text": "Money stuff stresses me out",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0212.wav"
+  },
+  {
+    "text": "Did prices jump again this month?",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0213.wav"
+  },
+  {
+    "text": "Send 48.88 to Zoe",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Zoe",
+        "amount": 48.88
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0214.wav"
+  },
+  {
+    "text": "Transfer half a stack to Hubby",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Hubby",
+        "amount": 500.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0215.wav"
+  },
+  {
+    "text": "Slide 91.20 to Mark",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Mark",
+        "amount": 91.2
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0216.wav"
+  },
+  {
+    "text": "Send 0.75 to Nick",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Nick",
+        "amount": 0.75
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0217.wav"
+  },
+  {
+    "text": "Kick 1.9k to the Supplier",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Supplier",
+        "amount": 1900.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0218.wav"
+  },
+  {
+    "text": "Move 36.36 to Pete",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Pete",
+        "amount": 36.36
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0219.wav"
+  },
+  {
+    "text": "Send 12.00 to Carl",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Carl",
+        "amount": 12.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0220.wav"
+  },
+  {
+    "text": "Push 250.25 to Uncle Ray",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Uncle Ray",
+        "amount": 250.25
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0221.wav"
+  },
+  {
+    "text": "Shoot 68.00 to Olivia",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Olivia",
+        "amount": 68.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0222.wav"
+  },
+  {
+    "text": "Send 4.44 to Ron",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Ron",
+        "amount": 4.44
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0223.wav"
+  },
+  {
+    "text": "Move 1200.75 to the Accountant",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Accountant",
+        "amount": 1200.75
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0224.wav"
+  },
+  {
+    "text": "Drop 55.05 on Sam",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Sam",
+        "amount": 55.05
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0225.wav"
+  },
+  {
+    "text": "Send 18.18 to Lily",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Lily",
+        "amount": 18.18
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0226.wav"
+  },
+  {
+    "text": "Transfer 6k to the Auto Dealer",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Auto Dealer",
+        "amount": 6000.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0227.wav"
+  },
+  {
+    "text": "Kick 29.90 euros to Paolo",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Paolo",
+        "amount": 29.9
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0228.wav"
+  },
+  {
+    "text": "Money just disappears so fast",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0229.wav"
+  },
+  {
+    "text": "How much did I spend on utilities?",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0230.wav"
+  },
+  {
+    "text": "Is my card still active?",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0231.wav"
+  },
+  {
+    "text": "I need a better budget plan",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0232.wav"
+  },
+  {
+    "text": "That fee was exactly 12.34",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0233.wav"
+  },
+  {
+    "text": "Send 73.73 to the Plumber",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Plumber",
+        "amount": 73.73
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0234.wav"
+  },
+  {
+    "text": "Shoot 21.50 to Alex for coffee",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Alex",
+        "amount": 21.5
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0235.wav"
+  },
+  {
+    "text": "Slide 180.25 to Mom before dinner",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Mom",
+        "amount": 180.25
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0236.wav"
+  },
+  {
+    "text": "Transfer 2.75k to David Smith for the deposit",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "David Smith",
+        "amount": 2750.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0237.wav"
+  },
+  {
+    "text": "Send 34.60 bucks over to Bro",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Bro",
+        "amount": 34.6
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0238.wav"
+  },
+  {
+    "text": "Drop 910.90 to the Property Owner",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Property Owner",
+        "amount": 910.9
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0239.wav"
+  },
+  {
+    "text": "Please push 49.95 to Sarah",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Sarah",
+        "amount": 49.95
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0240.wav"
+  },
+  {
+    "text": "Fire 6.80 to Mike for snacks",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Mike",
+        "amount": 6.8
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0241.wav"
+  },
+  {
+    "text": "Send 1.35k to the Web Developer",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Web Developer",
+        "amount": 1350.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0242.wav"
+  },
+  {
+    "text": "Move 72.15 to Emma",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Emma",
+        "amount": 72.15
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0243.wav"
+  },
+  {
+    "text": "Kick 41.40 euros to Marco",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Marco",
+        "amount": 41.4
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0244.wav"
+  },
+  {
+    "text": "Send 560.00 to Dad for the service",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Dad",
+        "amount": 560.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0245.wav"
+  },
+  {
+    "text": "Slide 19.30 to Nina",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Nina",
+        "amount": 19.3
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0246.wav"
+  },
+  {
+    "text": "Transfer 3.15k to the Consultant",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Consultant",
+        "amount": 3150.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0247.wav"
+  },
+  {
+    "text": "Shoot 54.44 bucks to Chris",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Chris",
+        "amount": 54.44
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0248.wav"
+  },
+  {
+    "text": "Send 11.25 to Tom for tolls",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Tom",
+        "amount": 11.25
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0249.wav"
+  },
+  {
+    "text": "Drop 1.45k on the Insurance Broker",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Insurance Broker",
+        "amount": 1450.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0250.wav"
+  },
+  {
+    "text": "Move 26.80 to Ben",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Ben",
+        "amount": 26.8
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0251.wav"
+  },
+  {
+    "text": "Send 92.92 to Amy",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Amy",
+        "amount": 92.92
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0252.wav"
+  },
+  {
+    "text": "Push 4.2k to the Flooring Guy",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Flooring Guy",
+        "amount": 4200.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0253.wav"
+  },
+  {
+    "text": "Shoot 17.05 to Laura",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Laura",
+        "amount": 17.05
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0254.wav"
+  },
+  {
+    "text": "I spent 89.60 on lunch yesterday",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0255.wav"
+  },
+  {
+    "text": "Why did my balance dip this morning?",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0256.wav"
+  },
+  {
+    "text": "Show me charges over 200",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0257.wav"
+  },
+  {
+    "text": "Money apps keep logging me out",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0258.wav"
+  },
+  {
+    "text": "Did utilities go up again?",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0259.wav"
+  },
+  {
+    "text": "Send 66.66 to Zoe",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Zoe",
+        "amount": 66.66
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0260.wav"
+  },
+  {
+    "text": "Transfer 0.8k to Hubby",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Hubby",
+        "amount": 800.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0261.wav"
+  },
+  {
+    "text": "Slide 108.40 to Mark",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Mark",
+        "amount": 108.4
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0262.wav"
+  },
+  {
+    "text": "Send 2.25 to Nick",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Nick",
+        "amount": 2.25
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0263.wav"
+  },
+  {
+    "text": "Kick 2.35k to the Supplier",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Supplier",
+        "amount": 2350.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0264.wav"
+  },
+  {
+    "text": "Move 39.39 to Pete",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Pete",
+        "amount": 39.39
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0265.wav"
+  },
+  {
+    "text": "Send 18.00 to Carl",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Carl",
+        "amount": 18.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0266.wav"
+  },
+  {
+    "text": "Push 310.75 to Uncle Sam",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Uncle Sam",
+        "amount": 310.75
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0267.wav"
+  },
+  {
+    "text": "Shoot 59.90 to Olivia",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Olivia",
+        "amount": 59.9
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0268.wav"
+  },
+  {
+    "text": "Send 8.08 to Ron",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Ron",
+        "amount": 8.08
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0269.wav"
+  },
+  {
+    "text": "Move 1450.55 to the Bookkeeper",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Bookkeeper",
+        "amount": 1450.55
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0270.wav"
+  },
+  {
+    "text": "Drop 63.30 on Sam",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Sam",
+        "amount": 63.3
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0271.wav"
+  },
+  {
+    "text": "Send 27.27 to Lily",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Lily",
+        "amount": 27.27
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0272.wav"
+  },
+  {
+    "text": "Transfer 7k to the Car Dealer",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Car Dealer",
+        "amount": 7000.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0273.wav"
+  },
+  {
+    "text": "Kick 52.10 euros to Matteo",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Matteo",
+        "amount": 52.1
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0274.wav"
+  },
+  {
+    "text": "Money just feels tight lately",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0275.wav"
+  },
+  {
+    "text": "How much did I spend on gas?",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0276.wav"
+  },
+  {
+    "text": "Is my card limit still the same?",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0277.wav"
+  },
+  {
+    "text": "I need to cut back on subscriptions",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0278.wav"
+  },
+  {
+    "text": "That receipt was for 47.89",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0279.wav"
+  },
+  {
+    "text": "Send 84.84 to the Plumber",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Plumber",
+        "amount": 84.84
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0280.wav"
+  },
+  {
+    "text": "Shoot 14.25 to Alex for the cab",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Alex",
+        "amount": 14.25
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0281.wav"
+  },
+  {
+    "text": "Slide 260.80 to Mom for groceries",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Mom",
+        "amount": 260.8
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0282.wav"
+  },
+  {
+    "text": "Transfer 3.6k to David Smith ASAP",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "David Smith",
+        "amount": 3600.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0283.wav"
+  },
+  {
+    "text": "Send 41.10 bucks to Bro",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Bro",
+        "amount": 41.1
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0284.wav"
+  },
+  {
+    "text": "Drop 725.55 to the HOA",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "HOA",
+        "amount": 725.55
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0285.wav"
+  },
+  {
+    "text": "Push 58.90 to Sarah for dinner",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Sarah",
+        "amount": 58.9
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0286.wav"
+  },
+  {
+    "text": "Fire 4.75 to Mike for parking",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Mike",
+        "amount": 4.75
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0287.wav"
+  },
+  {
+    "text": "Send 1.9k to the UX Designer",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "UX Designer",
+        "amount": 1900.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0288.wav"
+  },
+  {
+    "text": "Move 83.35 to Emma",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Emma",
+        "amount": 83.35
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0289.wav"
+  },
+  {
+    "text": "Kick 36.60 euros to Sofia",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Sofia",
+        "amount": 36.6
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0290.wav"
+  },
+  {
+    "text": "Send 275.00 to Dad for fuel",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Dad",
+        "amount": 275.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0291.wav"
+  },
+  {
+    "text": "Slide 21.45 to Nina",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Nina",
+        "amount": 21.45
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0292.wav"
+  },
+  {
+    "text": "Transfer 4.75k to the General Contractor",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "General Contractor",
+        "amount": 4750.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0293.wav"
+  },
+  {
+    "text": "Shoot 62.22 bucks to Chris",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Chris",
+        "amount": 62.22
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0294.wav"
+  },
+  {
+    "text": "Send 9.40 to Tom for snacks",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Tom",
+        "amount": 9.4
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0295.wav"
+  },
+  {
+    "text": "Drop 1.2k on the Mortgage Company",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Mortgage Company",
+        "amount": 1200.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0296.wav"
+  },
+  {
+    "text": "Move 31.70 to Ben",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Ben",
+        "amount": 31.7
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0297.wav"
+  },
+  {
+    "text": "Send 104.04 to Amy",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Amy",
+        "amount": 104.04
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0298.wav"
+  },
+  {
+    "text": "Push 5.5k to the Solar Installer",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Solar Installer",
+        "amount": 5500.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0299.wav"
+  },
+  {
+    "text": "Shoot 18.88 to Laura",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Laura",
+        "amount": 18.88
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0300.wav"
+  },
+  {
+    "text": "I spent 142.90 on groceries today",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0301.wav"
+  },
+  {
+    "text": "Why is my savings not growing?",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0302.wav"
+  },
+  {
+    "text": "Show me last week's spending",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0303.wav"
+  },
+  {
+    "text": "Money apps are down again",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0304.wav"
+  },
+  {
+    "text": "Did my subscription renew?",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0305.wav"
+  },
+  {
+    "text": "Send 73.73 to Zoe",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Zoe",
+        "amount": 73.73
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0306.wav"
+  },
+  {
+    "text": "Transfer 1.25k to Hubby",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Hubby",
+        "amount": 1250.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0307.wav"
+  },
+  {
+    "text": "Slide 112.60 to Mark",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Mark",
+        "amount": 112.6
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0308.wav"
+  },
+  {
+    "text": "Send 3.15 to Nick",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Nick",
+        "amount": 3.15
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0309.wav"
+  },
+  {
+    "text": "Kick 2.8k to the Wholesaler",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Wholesaler",
+        "amount": 2800.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0310.wav"
+  },
+  {
+    "text": "Move 46.46 to Pete",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Pete",
+        "amount": 46.46
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0311.wav"
+  },
+  {
+    "text": "Send 29.00 to Carl",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Carl",
+        "amount": 29.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0312.wav"
+  },
+  {
+    "text": "Push 415.85 to Aunt May",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Aunt May",
+        "amount": 415.85
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0313.wav"
+  },
+  {
+    "text": "Shoot 64.20 to Olivia",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Olivia",
+        "amount": 64.2
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0314.wav"
+  },
+  {
+    "text": "Send 9.09 to Ron",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Ron",
+        "amount": 9.09
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0315.wav"
+  },
+  {
+    "text": "Move 1680.30 to the Tax Advisor",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Tax Advisor",
+        "amount": 1680.3
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0316.wav"
+  },
+  {
+    "text": "Drop 71.15 on Sam",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Sam",
+        "amount": 71.15
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0317.wav"
+  },
+  {
+    "text": "Send 33.33 to Lily",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Lily",
+        "amount": 33.33
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0318.wav"
+  },
+  {
+    "text": "Transfer 8.5k to the Boat Dealer",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Boat Dealer",
+        "amount": 8500.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0319.wav"
+  },
+  {
+    "text": "Kick 47.70 euros to Andres",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Andres",
+        "amount": 47.7
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0320.wav"
+  },
+  {
+    "text": "Money keeps leaking everywhere",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0321.wav"
+  },
+  {
+    "text": "How much did I spend on travel?",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0322.wav"
+  },
+  {
+    "text": "Is my debit card still valid?",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0323.wav"
+  },
+  {
+    "text": "I need to rethink my budget",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0324.wav"
+  },
+  {
+    "text": "That charge was exactly 66.67",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0325.wav"
+  },
+  {
+    "text": "Send 97.97 to the Electrician",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Electrician",
+        "amount": 97.97
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0326.wav"
+  },
+  {
+    "text": "Shoot 17.90 to Alex for lunch",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Alex",
+        "amount": 17.9
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0327.wav"
+  },
+  {
+    "text": "Slide 305.40 to Mom for bills",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Mom",
+        "amount": 305.4
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0328.wav"
+  },
+  {
+    "text": "Transfer 4.1k to David Smith for the remodel",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "David Smith",
+        "amount": 4100.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0329.wav"
+  },
+  {
+    "text": "Send 48.25 bucks to Bro",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Bro",
+        "amount": 48.25
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0330.wav"
+  },
+  {
+    "text": "Drop 660.60 to the Condo Association",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Condo Association",
+        "amount": 660.6
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0331.wav"
+  },
+  {
+    "text": "Push 72.15 to Sarah for the gift",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Sarah",
+        "amount": 72.15
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0332.wav"
+  },
+  {
+    "text": "Fire 5.20 to Mike for tolls",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Mike",
+        "amount": 5.2
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0333.wav"
+  },
+  {
+    "text": "Send 2.6k to the Mobile App Developer",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Mobile App Developer",
+        "amount": 2600.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0334.wav"
+  },
+  {
+    "text": "Move 91.75 to Emma",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Emma",
+        "amount": 91.75
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0335.wav"
+  },
+  {
+    "text": "Kick 44.80 euros to Javier",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Javier",
+        "amount": 44.8
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0336.wav"
+  },
+  {
+    "text": "Send 315.00 to Dad for parts",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Dad",
+        "amount": 315.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0337.wav"
+  },
+  {
+    "text": "Slide 24.95 to Nina",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Nina",
+        "amount": 24.95
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0338.wav"
+  },
+  {
+    "text": "Transfer 5.2k to the Structural Engineer",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Structural Engineer",
+        "amount": 5200.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0339.wav"
+  },
+  {
+    "text": "Shoot 69.69 bucks to Chris",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Chris",
+        "amount": 69.69
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0340.wav"
+  },
+  {
+    "text": "Send 10.60 to Tom for snacks",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Tom",
+        "amount": 10.6
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0341.wav"
+  },
+  {
+    "text": "Drop 980.45 on the Title Company",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Title Company",
+        "amount": 980.45
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0342.wav"
+  },
+  {
+    "text": "Move 35.35 to Ben",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Ben",
+        "amount": 35.35
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0343.wav"
+  },
+  {
+    "text": "Send 118.18 to Amy",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Amy",
+        "amount": 118.18
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0344.wav"
+  },
+  {
+    "text": "Push 6.3k to the HVAC Installer",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "HVAC Installer",
+        "amount": 6300.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0345.wav"
+  },
+  {
+    "text": "Shoot 20.25 to Laura",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Laura",
+        "amount": 20.25
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0346.wav"
+  },
+  {
+    "text": "I spent 167.45 on groceries today",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0347.wav"
+  },
+  {
+    "text": "Why is my checking account so low?",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0348.wav"
+  },
+  {
+    "text": "Show me my largest charges this month",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0349.wav"
+  },
+  {
+    "text": "Money apps keep freezing on me",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0350.wav"
+  },
+  {
+    "text": "Did my insurance payment go through?",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0351.wav"
+  },
+  {
+    "text": "Send 81.81 to Zoe",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Zoe",
+        "amount": 81.81
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0352.wav"
+  },
+  {
+    "text": "Transfer 1.6k to Hubby",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Hubby",
+        "amount": 1600.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0353.wav"
+  },
+  {
+    "text": "Slide 129.50 to Mark",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Mark",
+        "amount": 129.5
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0354.wav"
+  },
+  {
+    "text": "Send 4.05 to Nick",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Nick",
+        "amount": 4.05
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0355.wav"
+  },
+  {
+    "text": "Kick 3.1k to the Distributor",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Distributor",
+        "amount": 3100.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0356.wav"
+  },
+  {
+    "text": "Move 52.52 to Pete",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Pete",
+        "amount": 52.52
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0357.wav"
+  },
+  {
+    "text": "Send 37.00 to Carl",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Carl",
+        "amount": 37.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0358.wav"
+  },
+  {
+    "text": "Push 560.65 to Aunt Linda",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Aunt Linda",
+        "amount": 560.65
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0359.wav"
+  },
+  {
+    "text": "Shoot 72.30 to Olivia",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Olivia",
+        "amount": 72.3
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0360.wav"
+  },
+  {
+    "text": "Send 10.10 to Ron",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Ron",
+        "amount": 10.1
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0361.wav"
+  },
+  {
+    "text": "Move 1890.90 to the Financial Advisor",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Financial Advisor",
+        "amount": 1890.9
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0362.wav"
+  },
+  {
+    "text": "Drop 79.85 on Sam",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Sam",
+        "amount": 79.85
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0363.wav"
+  },
+  {
+    "text": "Send 39.39 to Lily",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Lily",
+        "amount": 39.39
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0364.wav"
+  },
+  {
+    "text": "Transfer 9.2k to the RV Dealer",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "RV Dealer",
+        "amount": 9200.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0365.wav"
+  },
+  {
+    "text": "Kick 58.25 euros to Miguel",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Miguel",
+        "amount": 58.25
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0366.wav"
+  },
+  {
+    "text": "Money just keeps flying out",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0367.wav"
+  },
+  {
+    "text": "How much did I spend on repairs?",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0368.wav"
+  },
+  {
+    "text": "Is my account overdraft protected?",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0369.wav"
+  },
+  {
+    "text": "I need to seriously budget better",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0370.wav"
+  },
+  {
+    "text": "That charge was exactly 101.01",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0371.wav"
+  },
+  {
+    "text": "Send 123.45 to the Locksmith",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Locksmith",
+        "amount": 123.45
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0372.wav"
+  },
+  {
+    "text": "Shoot 22.75 to Alex for brunch",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Alex",
+        "amount": 22.75
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0373.wav"
+  },
+  {
+    "text": "Slide 345.90 to Mom for utilities",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Mom",
+        "amount": 345.9
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0374.wav"
+  },
+  {
+    "text": "Transfer 4.75k to David Smith for materials",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "David Smith",
+        "amount": 4750.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0375.wav"
+  },
+  {
+    "text": "Send 52.60 bucks to Bro for gas",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Bro",
+        "amount": 52.6
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0376.wav"
+  },
+  {
+    "text": "Drop 815.80 to the Property Tax Office",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Property Tax Office",
+        "amount": 815.8
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0377.wav"
+  },
+  {
+    "text": "Push 64.40 to Sarah for the tickets",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Sarah",
+        "amount": 64.4
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0378.wav"
+  },
+  {
+    "text": "Fire 7.35 to Mike for parking fees",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Mike",
+        "amount": 7.35
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0379.wav"
+  },
+  {
+    "text": "Send 3.2k to the Backend Engineer",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Backend Engineer",
+        "amount": 3200.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0380.wav"
+  },
+  {
+    "text": "Move 98.45 to Emma",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Emma",
+        "amount": 98.45
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0381.wav"
+  },
+  {
+    "text": "Kick 49.90 euros to Ricardo",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Ricardo",
+        "amount": 49.9
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0382.wav"
+  },
+  {
+    "text": "Send 355.00 to Dad for maintenance",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Dad",
+        "amount": 355.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0383.wav"
+  },
+  {
+    "text": "Slide 27.60 to Nina",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Nina",
+        "amount": 27.6
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0384.wav"
+  },
+  {
+    "text": "Transfer 5.85k to the Civil Engineer",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Civil Engineer",
+        "amount": 5850.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0385.wav"
+  },
+  {
+    "text": "Shoot 74.74 bucks to Chris",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Chris",
+        "amount": 74.74
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0386.wav"
+  },
+  {
+    "text": "Send 12.85 to Tom for coffee",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Tom",
+        "amount": 12.85
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0387.wav"
+  },
+  {
+    "text": "Drop 1.35k on the Escrow Company",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Escrow Company",
+        "amount": 1350.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0388.wav"
+  },
+  {
+    "text": "Move 38.90 to Ben",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Ben",
+        "amount": 38.9
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0389.wav"
+  },
+  {
+    "text": "Send 126.26 to Amy",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Amy",
+        "amount": 126.26
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0390.wav"
+  },
+  {
+    "text": "Push 6.9k to the Pool Contractor",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Pool Contractor",
+        "amount": 6900.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0391.wav"
+  },
+  {
+    "text": "Shoot 23.35 to Laura",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Laura",
+        "amount": 23.35
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0392.wav"
+  },
+  {
+    "text": "I spent 188.70 on groceries this week",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0393.wav"
+  },
+  {
+    "text": "Why does my balance fluctuate so much?",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0394.wav"
+  },
+  {
+    "text": "Show me spending above 500",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0395.wav"
+  },
+  {
+    "text": "Money apps logged me out again",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0396.wav"
+  },
+  {
+    "text": "Did my credit card payment post?",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0397.wav"
+  },
+  {
+    "text": "Send 88.88 to Zoe",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Zoe",
+        "amount": 88.88
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0398.wav"
+  },
+  {
+    "text": "Transfer 2.1k to Hubby",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Hubby",
+        "amount": 2100.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0399.wav"
+  },
+  {
+    "text": "Slide 142.75 to Mark",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Mark",
+        "amount": 142.75
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0400.wav"
+  },
+  {
+    "text": "Send 5.55 to Nick",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Nick",
+        "amount": 5.55
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0401.wav"
+  },
+  {
+    "text": "Kick 3.9k to the Logistics Company",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Logistics Company",
+        "amount": 3900.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0402.wav"
+  },
+  {
+    "text": "Move 58.58 to Pete",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Pete",
+        "amount": 58.58
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0403.wav"
+  },
+  {
+    "text": "Send 44.00 to Carl",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Carl",
+        "amount": 44.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0404.wav"
+  },
+  {
+    "text": "Push 675.45 to Aunt Rosa",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Aunt Rosa",
+        "amount": 675.45
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0405.wav"
+  },
+  {
+    "text": "Shoot 79.95 to Olivia",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Olivia",
+        "amount": 79.95
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0406.wav"
+  },
+  {
+    "text": "Send 11.11 to Ron",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Ron",
+        "amount": 11.11
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0407.wav"
+  },
+  {
+    "text": "Move 2040.40 to the Investment Advisor",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Investment Advisor",
+        "amount": 2040.4
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0408.wav"
+  },
+  {
+    "text": "Drop 84.60 on Sam",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Sam",
+        "amount": 84.6
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0409.wav"
+  },
+  {
+    "text": "Send 45.45 to Lily",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Lily",
+        "amount": 45.45
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0410.wav"
+  },
+  {
+    "text": "Transfer 10.5k to the Yacht Broker",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Yacht Broker",
+        "amount": 10500.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0411.wav"
+  },
+  {
+    "text": "Kick 63.30 euros to Felipe",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Felipe",
+        "amount": 63.3
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0412.wav"
+  },
+  {
+    "text": "Money keeps slipping through my fingers",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0413.wav"
+  },
+  {
+    "text": "How much did I spend on subscriptions?",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0414.wav"
+  },
+  {
+    "text": "Is my savings account still active?",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0415.wav"
+  },
+  {
+    "text": "I really need to rein in spending",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0416.wav"
+  },
+  {
+    "text": "That transaction was for exactly 212.12",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0417.wav"
+  },
+  {
+    "text": "Send 159.95 to the Handyman",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Handyman",
+        "amount": 159.95
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0418.wav"
+  },
+  {
+    "text": "Shoot 19.95 to Alex for the movie tickets",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Alex",
+        "amount": 19.95
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0419.wav"
+  },
+  {
+    "text": "Slide 410.30 to Mom to cover the internet bill",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Mom",
+        "amount": 410.3
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0420.wav"
+  },
+  {
+    "text": "Transfer 6.25k to David Smith for the final invoice",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "David Smith",
+        "amount": 6250.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0421.wav"
+  },
+  {
+    "text": "Send 63.75 bucks to Bro for the road trip",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Bro",
+        "amount": 63.75
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0422.wav"
+  },
+  {
+    "text": "Drop 950.90 to the Property Manager",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Property Manager",
+        "amount": 950.9
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0423.wav"
+  },
+  {
+    "text": "Push 88.20 to Sarah for dinner last night",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Sarah",
+        "amount": 88.2
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0424.wav"
+  },
+  {
+    "text": "Fire 6.15 to Mike for parking",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Mike",
+        "amount": 6.15
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0425.wav"
+  },
+  {
+    "text": "Send 4.4k to the Data Consultant",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Data Consultant",
+        "amount": 4400.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0426.wav"
+  },
+  {
+    "text": "Move 107.55 to Emma",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Emma",
+        "amount": 107.55
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0427.wav"
+  },
+  {
+    "text": "Kick 72.40 euros to Antonio",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Antonio",
+        "amount": 72.4
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0428.wav"
+  },
+  {
+    "text": "Send 480.00 to Dad for the car service",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Dad",
+        "amount": 480.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0429.wav"
+  },
+  {
+    "text": "Slide 32.80 to Nina",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Nina",
+        "amount": 32.8
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0430.wav"
+  },
+  {
+    "text": "Transfer 7.75k to the Construction Firm",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Construction Firm",
+        "amount": 7750.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0431.wav"
+  },
+  {
+    "text": "Shoot 81.18 bucks to Chris",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Chris",
+        "amount": 81.18
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0432.wav"
+  },
+  {
+    "text": "Send 14.40 to Tom for lunch",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Tom",
+        "amount": 14.4
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0433.wav"
+  },
+  {
+    "text": "Drop 1.85k on the Mortgage Lender",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Mortgage Lender",
+        "amount": 1850.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0434.wav"
+  },
+  {
+    "text": "Move 42.42 to Ben",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Ben",
+        "amount": 42.42
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0435.wav"
+  },
+  {
+    "text": "Send 135.90 to Amy",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Amy",
+        "amount": 135.9
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0436.wav"
+  },
+  {
+    "text": "Push 7.8k to the Security Installer",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Security Installer",
+        "amount": 7800.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0437.wav"
+  },
+  {
+    "text": "Shoot 26.60 to Laura",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Laura",
+        "amount": 26.6
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0438.wav"
+  },
+  {
+    "text": "I spent 215.75 on groceries yesterday",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0439.wav"
+  },
+  {
+    "text": "Why does my balance drop so fast?",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0440.wav"
+  },
+  {
+    "text": "Show me my expenses from last week",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0441.wav"
+  },
+  {
+    "text": "Money apps are acting weird again",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0442.wav"
+  },
+  {
+    "text": "Did my rent payment already go through?",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0443.wav"
+  },
+  {
+    "text": "Send 94.94 to Zoe",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Zoe",
+        "amount": 94.94
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0444.wav"
+  },
+  {
+    "text": "Transfer 2.85k to Hubby",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Hubby",
+        "amount": 2850.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0445.wav"
+  },
+  {
+    "text": "Slide 158.65 to Mark",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Mark",
+        "amount": 158.65
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0446.wav"
+  },
+  {
+    "text": "Send 6.75 to Nick",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Nick",
+        "amount": 6.75
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0447.wav"
+  },
+  {
+    "text": "Kick 4.6k to the Freight Company",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Freight Company",
+        "amount": 4600.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0448.wav"
+  },
+  {
+    "text": "Move 61.61 to Pete",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Pete",
+        "amount": 61.61
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0449.wav"
+  },
+  {
+    "text": "Send 49.00 to Carl",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Carl",
+        "amount": 49.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0450.wav"
+  },
+  {
+    "text": "Push 820.80 to Aunt Maria",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Aunt Maria",
+        "amount": 820.8
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0451.wav"
+  },
+  {
+    "text": "Shoot 86.40 to Olivia",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Olivia",
+        "amount": 86.4
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0452.wav"
+  },
+  {
+    "text": "Send 12.12 to Ron",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Ron",
+        "amount": 12.12
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0453.wav"
+  },
+  {
+    "text": "Move 2450.75 to the Wealth Manager",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Wealth Manager",
+        "amount": 2450.75
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0454.wav"
+  },
+  {
+    "text": "Drop 91.10 on Sam",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Sam",
+        "amount": 91.1
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0455.wav"
+  },
+  {
+    "text": "Send 51.51 to Lily",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Lily",
+        "amount": 51.51
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0456.wav"
+  },
+  {
+    "text": "Transfer 12k to the Aircraft Broker",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Aircraft Broker",
+        "amount": 12000.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0457.wav"
+  },
+  {
+    "text": "Kick 71.75 euros to Bruno",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Bruno",
+        "amount": 71.75
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0458.wav"
+  },
+  {
+    "text": "Money keeps vanishing every payday",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0459.wav"
+  },
+  {
+    "text": "How much did I spend on food this month?",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0460.wav"
+  },
+  {
+    "text": "Is my checking account still active?",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0461.wav"
+  },
+  {
+    "text": "I need to seriously cut expenses",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0462.wav"
+  },
+  {
+    "text": "That transaction was exactly 333.30",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0463.wav"
+  },
+  {
+    "text": "Send 199.99 to the Appliance Repair Guy",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Appliance Repair Guy",
+        "amount": 199.99
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0464.wav"
+  },
+  {
+    "text": "Shoot 24.50 to Alex for late-night tacos",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Alex",
+        "amount": 24.5
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0465.wav"
+  },
+  {
+    "text": "Slide 525.75 to Mom for the insurance bill",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Mom",
+        "amount": 525.75
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0466.wav"
+  },
+  {
+    "text": "Transfer 8.4k to David Smith to close it out",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "David Smith",
+        "amount": 8400.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0467.wav"
+  },
+  {
+    "text": "Send 71.30 bucks to Bro for gas money",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Bro",
+        "amount": 71.3
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0468.wav"
+  },
+  {
+    "text": "Drop 1025.60 to the Leasing Office",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Leasing Office",
+        "amount": 1025.6
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0469.wav"
+  },
+  {
+    "text": "Push 96.45 to Sarah for the concert",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Sarah",
+        "amount": 96.45
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0470.wav"
+  },
+  {
+    "text": "Fire 8.90 to Mike for tolls",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Mike",
+        "amount": 8.9
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0471.wav"
+  },
+  {
+    "text": "Send 5.6k to the Cloud Consultant",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Cloud Consultant",
+        "amount": 5600.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0472.wav"
+  },
+  {
+    "text": "Move 119.85 to Emma",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Emma",
+        "amount": 119.85
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0473.wav"
+  },
+  {
+    "text": "Kick 84.20 euros to Stefan",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Stefan",
+        "amount": 84.2
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0474.wav"
+  },
+  {
+    "text": "Send 540.00 to Dad for the brake job",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Dad",
+        "amount": 540.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0475.wav"
+  },
+  {
+    "text": "Slide 39.95 to Nina",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Nina",
+        "amount": 39.95
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0476.wav"
+  },
+  {
+    "text": "Transfer 9.25k to the Engineering Firm",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Engineering Firm",
+        "amount": 9250.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0477.wav"
+  },
+  {
+    "text": "Shoot 88.08 bucks to Chris",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Chris",
+        "amount": 88.08
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0478.wav"
+  },
+  {
+    "text": "Send 15.95 to Tom for breakfast",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Tom",
+        "amount": 15.95
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0479.wav"
+  },
+  {
+    "text": "Drop 2.15k on the Title Services Company",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Title Services Company",
+        "amount": 2150.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0480.wav"
+  },
+  {
+    "text": "Move 47.70 to Ben",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Ben",
+        "amount": 47.7
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0481.wav"
+  },
+  {
+    "text": "Send 149.49 to Amy",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Amy",
+        "amount": 149.49
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0482.wav"
+  },
+  {
+    "text": "Push 8.6k to the Fire Safety Contractor",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Fire Safety Contractor",
+        "amount": 8600.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0483.wav"
+  },
+  {
+    "text": "Shoot 29.90 to Laura",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Laura",
+        "amount": 29.9
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0484.wav"
+  },
+  {
+    "text": "I spent 267.80 on groceries this weekend",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0485.wav"
+  },
+  {
+    "text": "Why does my paycheck never last?",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0486.wav"
+  },
+  {
+    "text": "Show me all charges over 1k",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0487.wav"
+  },
+  {
+    "text": "My banking app logged me out again",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0488.wav"
+  },
+  {
+    "text": "Did my credit card autopay work?",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0489.wav"
+  },
+  {
+    "text": "Send 101.01 to Zoe",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Zoe",
+        "amount": 101.01
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0490.wav"
+  },
+  {
+    "text": "Transfer 3.35k to Hubby",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Hubby",
+        "amount": 3350.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0491.wav"
+  },
+  {
+    "text": "Slide 176.80 to Mark",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Mark",
+        "amount": 176.8
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0492.wav"
+  },
+  {
+    "text": "Send 7.95 to Nick",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Nick",
+        "amount": 7.95
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0493.wav"
+  },
+  {
+    "text": "Kick 5.8k to the Shipping Company",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Shipping Company",
+        "amount": 5800.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0494.wav"
+  },
+  {
+    "text": "Move 68.68 to Pete",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Pete",
+        "amount": 68.68
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0495.wav"
+  },
+  {
+    "text": "Send 54.00 to Carl",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Carl",
+        "amount": 54.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0496.wav"
+  },
+  {
+    "text": "Push 945.95 to Aunt Helen",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Aunt Helen",
+        "amount": 945.95
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0497.wav"
+  },
+  {
+    "text": "Shoot 92.75 to Olivia",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Olivia",
+        "amount": 92.75
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0498.wav"
+  },
+  {
+    "text": "Send 13.13 to Ron",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Ron",
+        "amount": 13.13
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0499.wav"
+  },
+  {
+    "text": "Move 2875.25 to the Retirement Advisor",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Retirement Advisor",
+        "amount": 2875.25
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0500.wav"
+  },
+  {
+    "text": "Drop 98.40 on Sam",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Sam",
+        "amount": 98.4
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0501.wav"
+  },
+  {
+    "text": "Send 66.66 to Lily",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Lily",
+        "amount": 66.66
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0502.wav"
+  },
+  {
+    "text": "Transfer 14k to the Private Jet Broker",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Private Jet Broker",
+        "amount": 14000.0
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0503.wav"
+  },
+  {
+    "text": "Kick 89.55 euros to Tomas",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Tomas",
+        "amount": 89.55
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0504.wav"
+  },
+  {
+    "text": "Money just keeps evaporating",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0505.wav"
+  },
+  {
+    "text": "How much did I spend on dining out?",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0506.wav"
+  },
+  {
+    "text": "Is my account balance updating correctly?",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0507.wav"
+  },
+  {
+    "text": "I really need to watch my spending",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0508.wav"
+  },
+  {
+    "text": "That charge was exactly 444.44",
+    "label": null,
+    "audio_path": "wavs_Cameron_Russell_115/sample_0509.wav"
+  },
+  {
+    "text": "Send 275.50 to the Carpet Cleaner",
+    "label": {
+      "tool_name": "transfer_money",
+      "arguments": {
+        "recipient": "Carpet Cleaner",
+        "amount": 275.5
+      }
+    },
+    "audio_path": "wavs_Cameron_Russell_115/sample_0510.wav"
+  }
+]
