@@ -17,8 +17,8 @@ from qwen_omni_utils import process_mm_info
 
 # === НАСТРОЙКИ ===
 MODEL_ID = "Qwen/Qwen2.5-Omni-7B"
-INPUT_FILE = "dataset_audio_Cameron_Russell_115.json"
-OUTPUT_FILE = "results_omni_7b.json"
+INPUT_FILE = "data/dataset_audio_Cameron_Russell_115.json"
+OUTPUT_FILE = "results/results_omni_7b_v2.json"
 DEVICE = torch.device('cuda:0')
 # =================
 
@@ -50,14 +50,10 @@ If unrelated, return null."""
 ASR_PROMPT = "Please transcribe the audio accurately."
 
 def generate_omni(conversation, generate_audio=False):
-    """
-    Универсальная функция генерации
-    """
     # 1. Текст (промпт)
     text = processor.apply_chat_template(conversation, add_generation_prompt=True, tokenize=False)
     
-    # 2. Аудио/Видео (через установленную утилиту)
-    # use_audio_in_video=False - так как у нас только аудио
+    # 2. Аудио
     audios, images, videos = process_mm_info(conversation, use_audio_in_video=False)
     
     # 3. Токенизация
@@ -72,30 +68,46 @@ def generate_omni(conversation, generate_audio=False):
     )
     inputs = inputs.to(model.device).to(model.dtype)
     
+    # Запоминаем длину входа, чтобы потом отрезать
+    input_len = inputs.input_ids.shape[1]
+    
     # 4. Генерация
     with torch.no_grad():
-        # ВАЖНО: use_audio_in_video=False обязателен и тут
-        out = model.generate(**inputs, use_audio_in_video=False, return_audio=False, max_new_tokens=128)
+        out = model.generate(
+            **inputs, 
+            use_audio_in_video=False, 
+            return_audio=False, 
+            max_new_tokens=128
+        )
         
-        # Обработка выхода: Omni часто возвращает tuple (token_ids, audio_content)
-        # Нам нужны только token_ids (текст)
         if isinstance(out, tuple):
             text_ids = out[0]
         else:
             text_ids = out
 
-    # 5. Декодирование
-    response_text = processor.batch_decode(text_ids, skip_special_tokens=True, clean_up_tokenization_spaces=False)[0]
-    return response_text
+    # 5. Декодирование (ОТРЕЗАЕМ ВХОД)
+    # Берем токены только начиная с input_len
+    new_tokens = text_ids[0][input_len:]
+    response_text = processor.tokenizer.decode(new_tokens, skip_special_tokens=True)
+    
+    return response_text.strip()
 
 def extract_json(text):
     try:
+        # 1. Пытаемся найти блок кода ```json ... ```
+        match = re.search(r"```json\s*(\{.*?\})\s*```", text, re.DOTALL)
+        if match:
+            return json.loads(match.group(1))
+            
+        # 2. Если нет, ищем просто фигурные скобки
         match = re.search(r"\{.*\}", text, re.DOTALL)
-        if match: return json.loads(match.group(0))
+        if match:
+            return json.loads(match.group(0))
+            
         if "null" in text.lower(): return None
         return "PARSE_ERROR"
-    except: return "PARSE_ERROR"
-
+    except:
+        return "PARSE_ERROR"
 
 # -------------------
 conversation = [

@@ -6,8 +6,8 @@ from jiwer import wer as compute_wer
 
 
 # === НАСТРОЙКИ ===
-# Можно передать файл с результатами как аргумент: python calculate_metrics.py results_omni_7b_v3.json
-INPUT_FILE = sys.argv[1] if len(sys.argv) > 1 else "results_omni_7b_v2.json"
+# Запуск из корня проекта: python src/calculate_metrics.py results/results_omni_7b_v3.json
+INPUT_FILE = sys.argv[1] if len(sys.argv) > 1 else "results/results_omni_7b_v2.json"
 REPORT_FILE = INPUT_FILE.replace(".json", "_metrics.txt")
 # =================
 

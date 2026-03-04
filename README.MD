@@ -1,132 +1,111 @@
-## Проект - "Speech-Toolformer" - в рамках DLS: Speech
+# Speech-Toolformer: Голосовой ассистент для банковского приложения
+
+**Итоговый проект курса DLS MIPT: Speech, Fall 2025**
 
 ---
 
-## Тип проекта - "Applied Science (исследовательско-прикладной)"
+## Идея
 
----
+Голосовой ассистент для банкинга: пользователь произносит _"Transfer five hundred to Mom"_ —
+система транскрибирует речь, понимает намерение и возвращает структурированный вызов инструмента:
 
-## Идея - **Голосовой ассистент в банковском приложении**
-
-### Описание
-
-Есть запрос со стороны бизнеса (банк) на создание сервиса в мобильном приложении, где клиент говорит, например, "покажи историю транзакций", "какой там курс доллара?", "переведи 1000 рублей маме", и т.п.
-
-Решил взять для MVP одну функцию - `"transfer_money"`, но тут будет 2 аргумента - `"recipient"` и `"amount"`.
-
-Для этого прошел по такому пайплайну:
-1. Сгенерировал с помощью LLM (ChatGPT) 511 текстовых JSON
-2. Получил синтезированные аудио с помощью xtts-v2
-3. Подготовил манифест-файл
-4. Сгруппировал эксперименты A, B, C, D в один скрипт
-5. Подсчет метрик
-6. Анализ результатов
-
-
----
-
-### Files:
-*  `generated_dataset.json` - синтетический текстовый датасет (с помощью ChatGPT)
-*  `generate_audio.py` - скрипт для TTS-синтеза (с помощью xtts-v2)
-*  `dataset_audio_Cameron_Russell_115.json` - файл манифеста
-*  `Cameron_Russell-chunk-38.wav` - референсное аудио для TTS-генерации
-*  `wavs_Cameron_Russell_115.zip` - архив со сгенерированными аудиофайлами
-*  `run_omni_project.py` - основной скрипт запуска экспериментов с моделью "Qwen2.5-Omni-7B" - *пока дает не идеальные результаты, нужно доработать*
-*  `results_omni_7b.json` - результат запуского основного скрипта, содержит выдачу для каждого пайплайна (a, b, c, d) - *пока не финальный результат*
-*  `run_omni_project_v2.py` - основной скрипт запуска экспериментов с моделью "Qwen2.5-Omni-7B" - исправил ошибки PARSE_ERROR. *текущий вариант*
-*  `results_omni_7b.json` - результат запуского основного скрипта (run_omni_project_v2.py), содержит выдачу для каждого пайплайна (a, b, c, d) - *текущий результат*
-*  `calculate_metrics.py` - скрипт для подсчета метрик после получения результатов экспериментов
-*  `metrics_report.txt` - вывод результатов с метриками.
-
-
----
-
-## Ход работ
-
-### Фаза 1: TTS: Синтез аудио
-
+```json
+{"tool_name": "transfer_money", "arguments": {"recipient": "Mom", "amount": 500.0}}
 ```
+
+Инструмент: `transfer_money(recipient: str, amount: float)` — два аргумента разных типов,
+реальный бизнес-кейс, нетривиальный с точки зрения парсинга.
+
+Модель: **Qwen2.5-Omni-7B** (нативно мультимодальная, аудио → текст в одном forward pass).
+Никакого файнтюна — только zero-shot с системным промптом.
+
+Подробный анализ, метрики и выводы: **[report.md](report.md)**
+
+---
+
+## Ключевые результаты
+
+| Pipeline | Описание | Accuracy | Precision | Recall | FAR |
+|----------|----------|:--------:|:---------:|:------:|:---:|
+| **A** — Text Oracle | GT-текст → JSON | **98.83%** | 0.997 | 0.988 | 0.009 |
+| **B** — ASR | Аудио → транскрипт | WER **66.74%**¹ | — | — | — |
+| **C** — Direct | Аудио → JSON напрямую | **68.30%** | 0.992 | 0.601 | 0.018 |
+| **D** — Cascaded | Аудио → ASR → JSON | **67.51%** | **1.000** | 0.586 | **0.000** |
+
+¹ WER завышен из-за digit↔word mismatch ("1500" vs "fifteen hundred"); семантический WER ~20–30%.
+
+**Вывод:** Pipeline D (каскадный) рекомендуется для банкинга — precision=1.000, FAR=0.000 (ни одного ложного срабатывания). Pipeline C чуть лучше по recall, но даёт 2 ложных вызова на 511 сэмплов.
+
+---
+
+## Структура репозитория
+
+### `data/` — входные данные
+| Файл | Описание |
+|------|----------|
+| `data/generated_dataset.json` | 511 текстовых примеров (ChatGPT): 401 positive, 110 negative |
+| `data/dataset_audio_Cameron_Russell_115.json` | Манифест с полями `text`, `label`, `audio_path` |
+| `data/Cameron_Russell-chunk-38.wav` | Референсное аудио для TTS |
+| `data/wavs_Cameron_Russell_115.zip` | 511 синтезированных WAV (XTTS-v2) |
+
+### `src/` — скрипты
+| Файл | Описание |
+|------|----------|
+| `src/generate_audio.py` | TTS-синтез аудио (XTTS-v2, голос Cameron Russell) |
+| `src/run_omni_project_v2.py` | Эксперименты v2 (все пайплайны A–D; содержит баг в D) |
+| `src/run_omni_project_v3.py` | Эксперименты v3 — **финальная версия**, фикс Pipeline D |
+| `src/calculate_metrics.py` | Метрики: accuracy, precision, recall, FAR, parsable rate, WER |
+| `src/error_analysis.py` | Детальный разбор ошибок по категориям для каждого пайплайна |
+
+### `results/` — результаты
+| Файл | Описание |
+|------|----------|
+| `results/results_omni_7b_v2.json` | Сырые результаты v2 (511 сэмплов) |
+| `results/results_omni_7b_v3.json` | Сырые результаты v3 (511 сэмплов, фикс D) |
+| `results/results_omni_7b_v2_metrics.txt` | Метрики v2 |
+| `results/results_omni_7b_v3_metrics.txt` | Метрики v3 |
+| `results/error_analysis_v3.txt` | Разбор ошибок по категориям (финальный) |
+
+### Отчёт
+| Файл | Описание |
+|------|----------|
+| `report.md` | **Полный отчёт**: дизайн данных, эксперименты, анализ ошибок, выводы |
+| `demo_notebook.ipynb` | Интерактивный демо-ноутбук: все 4 пайплайна + метрики |
+
+---
+
+## Воспроизведение
+
+### 1. Синтез аудио (если нужно пересинтезировать)
+
+```bash
 conda create -n xtts_env python=3.10 -y
 conda activate xtts_env
 conda install -c conda-forge ffmpeg -y
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
 pip install TTS
+COQUI_TOS_AGREED=1 python src/generate_audio.py
 ```
 
+### 2. Запуск экспериментов (Qwen2.5-Omni-7B)
 
-```
-pip install "transformers==4.33.0" --force-reinstall
-pip install "numpy<2.0" --force-reinstall
-```
-
-TTS-generate audios:
-```
-COQUI_TOS_AGREED=1 python generate_audio.py
-```
-
-
-### Фаза 2: Omni-model
-
-```
+```bash
 conda create -n omni_env python=3.10 -y
 conda activate omni_env
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
-pip install git+https://github.com/huggingface/transformers 
+pip install git+https://github.com/huggingface/transformers
 pip install accelerate librosa soundfile
-
 pip install qwen-omni-utils[decord] -U
 pip install timm decord moviepy
+
+python src/run_omni_project_v3.py   # финальная версия
 ```
 
+### 3. Метрики и анализ ошибок
 
-Run experiments in one script:
-```
-python run_omni_project.py
-```
-
-Получил файл `results_omni_7b.json`, содержащий местами "PARSE_ERROR" в некоторых пайплайнах. Но это не критично, т.к. модель реально услышала аудио. Однако функция extract_json ищет чистый JSON, а видит кучу текста с промптами, поэтому выдает "PARSE_ERROR". Поэтому пофиксил функции generate_omni и extract_json.
-
-Rerun experiments:
-```
-python run_omni_project_v2.py
-```
-Получил файл `results_omni_7b_v2.json`, где уже нет "PARSE_ERROR"
-
-## Фаза 3: Подсчет метрик
-
-```
+```bash
 pip install jiwer
-pip install num2words
+
+python src/calculate_metrics.py results/results_omni_7b_v3.json
+python src/error_analysis.py results/results_omni_7b_v3.json
 ```
-
-Calculate metrics:
-```
-python calculate_metrics.py
-```
-
-## Результат
-```
-========================================
-FINAL METRICS REPORT
-========================================
-Pipeline A (Text Oracle):        98.63% Accuracy
-Pipeline C (Direct Audio):       70.65% Accuracy
-Pipeline D (Cascaded ASR+NLP):   55.58% Accuracy
-----------------------------------------
-Pipeline B (ASR Quality, raw):  103.37% WER
-(Note: WER is inflated due to assistant-style transcription output)
-========================================
-
-ANALYSIS:
-Direct audio-to-intent inference outperforms the cascaded ASR-based pipeline by 15.07% accuracy.
-This suggests that intermediate transcription introduces compounding errors that degrade intent extraction performance.
-
-Modality Gap (Direct vs Text Oracle): -27.98% accuracy.
-
-📄 Metrics saved to metrics_report.txt
-```
-
----
-
-
-***Проект не оформлен до конца, находится в процессе завершения.***

@@ -36,8 +36,8 @@ from qwen_omni_utils import process_mm_info
 
 # === НАСТРОЙКИ ===
 MODEL_ID    = "Qwen/Qwen2.5-Omni-7B"
-INPUT_FILE  = "dataset_audio_Cameron_Russell_115.json"
-OUTPUT_FILE = "results_omni_7b_v3.json"
+INPUT_FILE  = "data/dataset_audio_Cameron_Russell_115.json"
+OUTPUT_FILE = "results/results_omni_7b_v3.json"
 # =================
 
 

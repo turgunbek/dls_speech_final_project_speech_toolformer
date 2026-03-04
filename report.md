@@ -460,16 +460,18 @@ Rationale:
 
 | File | Description |
 |------|-------------|
-| `generated_dataset.json` | Synthetic text dataset (511 examples, ChatGPT) |
-| `generate_audio.py` | TTS synthesis script (XTTS-v2) |
-| `Cameron_Russell-chunk-38.wav` | Speaker reference audio for TTS |
-| `dataset_audio_Cameron_Russell_115.json` | Dataset manifest with `text`, `label`, `audio_path` |
-| `wavs_Cameron_Russell_115.zip` | 511 synthesized WAV files (archived) |
-| `run_omni_project_v2.py` | Experiment script v2 — all pipelines A–D (has Pipeline D bug) |
-| `run_omni_project_v3.py` | Experiment script v3 — fixes Pipeline D transcript passing |
-| `results_omni_7b_v2.json` | Raw results from v2 run (511 samples) |
-| `results_omni_7b_v3.json` | Raw results from v3 run (511 samples, fixed D) |
-| `calculate_metrics.py` | Metrics: accuracy, precision, recall, FAR, parsable rate, WER |
-| `error_analysis.py` | Detailed error breakdown and categorization per pipeline |
-| `results_omni_7b_v2_metrics.txt` | Auto-generated metrics report for v2 |
-| `results_omni_7b_v3_metrics.txt` | Auto-generated metrics report for v3 |
+| `data/generated_dataset.json` | Synthetic text dataset (511 examples, ChatGPT) |
+| `data/Cameron_Russell-chunk-38.wav` | Speaker reference audio for TTS |
+| `data/dataset_audio_Cameron_Russell_115.json` | Dataset manifest with `text`, `label`, `audio_path` |
+| `data/wavs_Cameron_Russell_115.zip` | 511 synthesized WAV files (archived) |
+| `src/generate_audio.py` | TTS synthesis script (XTTS-v2) |
+| `src/run_omni_project_v2.py` | Experiment script v2 — all pipelines A–D (has Pipeline D bug) |
+| `src/run_omni_project_v3.py` | Experiment script v3 — fixes Pipeline D transcript passing |
+| `src/calculate_metrics.py` | Metrics: accuracy, precision, recall, FAR, parsable rate, WER |
+| `src/error_analysis.py` | Detailed error breakdown and categorization per pipeline |
+| `results/results_omni_7b_v2.json` | Raw results from v2 run (511 samples) |
+| `results/results_omni_7b_v3.json` | Raw results from v3 run (511 samples, fixed D) |
+| `results/results_omni_7b_v2_metrics.txt` | Auto-generated metrics report for v2 |
+| `results/results_omni_7b_v3_metrics.txt` | Auto-generated metrics report for v3 |
+| `results/error_analysis_v3.txt` | Detailed error categorization for all pipelines (v3) |
+| `demo_notebook.ipynb` | Interactive demo: all 4 pipelines + metrics on pre-computed results |

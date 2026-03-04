@@ -2,9 +2,9 @@
 error_analysis.py
 =================
 Разбор ошибок по каждому пайплайну.
-Запуск:
-    python error_analysis.py results_omni_7b_v2.json
-    python error_analysis.py results_omni_7b_v3.json   (после прогона v3)
+Запуск из корня проекта:
+    python src/error_analysis.py results/results_omni_7b_v2.json
+    python src/error_analysis.py results/results_omni_7b_v3.json
 """
 
 import json
@@ -32,7 +32,7 @@ def is_hallucination(text: str) -> bool:
     return False
 
 
-INPUT_FILE = sys.argv[1] if len(sys.argv) > 1 else "results_omni_7b_v2.json"
+INPUT_FILE = sys.argv[1] if len(sys.argv) > 1 else "results/results_omni_7b_v2.json"
 
 with open(INPUT_FILE, "r", encoding="utf-8") as f:
     data = json.load(f)

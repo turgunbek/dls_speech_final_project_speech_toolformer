@@ -5,10 +5,10 @@ from TTS.api import TTS
 from tqdm import tqdm
 
 # === НАСТРОЙКИ ===
-INPUT_JSON = "generated_dataset.json"   # Файл от ChatGPT со сгенерированными примерами в формате json
-OUTPUT_JSON = "dataset_audio_Cameron_Russell_115.json"      # Результат
-OUTPUT_FOLDER = "wavs_Cameron_Russell_115"  # Куда кладем аудио
-SPEAKER_WAV = "Cameron_Russell-chunk-38.wav"  # Референс голоса
+INPUT_JSON = "data/generated_dataset.json"   # Файл от ChatGPT со сгенерированными примерами в формате json
+OUTPUT_JSON = "data/dataset_audio_Cameron_Russell_115.json"      # Результат
+OUTPUT_FOLDER = "wavs_Cameron_Russell_115"  # Куда кладем аудио (папка в корне проекта)
+SPEAKER_WAV = "data/Cameron_Russell-chunk-38.wav"  # Референс голоса
 # =================
 
 # 1. Проверяем наличие GPU
