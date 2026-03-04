@@ -1,11 +1,31 @@
-# Ignore everything by default
-*
+# --- Игнорируемые папки ---
+old/
+wavs_Cameron_Russell_115/
+__pycache__/
 
-# But keep this file
-!.gitignore
+# --- Игнорируемые файлы ---
+current_state_review.md
+md_from_pdf.md
+speech_toolformer.pdf
+terminal_commands.txt
+TODO.md
+Тема проекта.md
 
-# And keep only the 4 required files
-!wavs_Cameron_Russell_115.zip
-!generated_dataset.json
-!Cameron_Russell-chunk-38.wav
-!dataset_audio_Cameron_Russell_115.json
+# Системные файлы (на всякий случай)
+.DS_Store
+Thumbs.db
+
+
+
+
+# # Ignore everything by default
+# *
+
+# # But keep this file
+# !.gitignore
+
+# # And keep only the 4 required files
+# !wavs_Cameron_Russell_115.zip
+# !generated_dataset.json
+# !Cameron_Russell-chunk-38.wav
+# !dataset_audio_Cameron_Russell_115.json
