@@ -29,7 +29,8 @@ Pipeline D (Cascaded: ASR transcript → JSON):
 
 --------------------------------------------------------
 Pipeline B — ASR Quality (WER)
-  WER:              67.16%
+  WER (raw):        67.16%
+  WER (word2num):   57.74%  ← digit↔word normalized
   Samples used:     504 / 511
   Hallucinations:   7  (skipped from WER)
   Extraction failed:0  (skipped from WER)

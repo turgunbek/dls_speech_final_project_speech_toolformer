@@ -90,12 +90,61 @@ def extract_asr_text(text: str) -> str:
     return ""
 
 
-def normalize_text_for_wer(text: str) -> str:
+def normalize_text_for_wer(text: str, normalize_numbers: bool = False) -> str:
     """Нормализует текст для подсчёта WER: lowercase, без пунктуации."""
     if not isinstance(text, str):
         return ""
     text = re.sub(r"[^\w\s]", "", text).lower()
-    return " ".join(text.split())
+    text = " ".join(text.split())
+    if normalize_numbers:
+        text = normalize_numbers_in_text(text)
+    return text
+
+
+def normalize_numbers_in_text(text: str) -> str:
+    """
+    Конвертирует числовые слова в цифры для честного WER.
+    Примеры: "fifteen hundred" → "1500", "fifty" → "50",
+             "one thousand two hundred" → "1200".
+    Использует word2number; фразы находятся жадным поиском.
+    """
+    try:
+        from word2number import w2n
+    except ImportError:
+        return text  # если нет библиотеки — не меняем
+
+    # Список «числовых» слов для определения границ фраз
+    NUM_WORDS = {
+        "zero","one","two","three","four","five","six","seven","eight","nine","ten",
+        "eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen",
+        "eighteen","nineteen","twenty","thirty","forty","fifty","sixty","seventy",
+        "eighty","ninety","hundred","thousand","million","billion","a",
+    }
+
+    words = text.split()
+    result = []
+    i = 0
+    while i < len(words):
+        # Пробуем найти максимально длинную числовую фразу начиная с i
+        best_end = i  # по умолчанию — одно слово
+        best_val = None
+        if words[i].lower() in NUM_WORDS:
+            for j in range(len(words), i, -1):
+                phrase = " ".join(words[i:j])
+                try:
+                    val = w2n.word_to_num(phrase)
+                    best_val = str(val)
+                    best_end = j
+                    break
+                except ValueError:
+                    pass
+        if best_val is not None:
+            result.append(best_val)
+            i = best_end
+        else:
+            result.append(words[i])
+            i += 1
+    return " ".join(result)
 
 
 def compare_json(pred, truth) -> bool:
@@ -254,6 +303,11 @@ final_wer = compute_wer(wer_refs, wer_hyps) if wer_refs else float("nan")
 wer_samples_used = len(wer_refs)
 wer_samples_skipped = hallucination_count + extraction_failed_count
 
+# WER с нормализацией чисел (word2num): "fifteen hundred" → "1500"
+wer_refs_norm = [normalize_numbers_in_text(r) for r in wer_refs]
+wer_hyps_norm = [normalize_numbers_in_text(h) for h in wer_hyps]
+final_wer_norm = compute_wer(wer_refs_norm, wer_hyps_norm) if wer_refs_norm else float("nan")
+
 # ---------------------------------------------------------------------------
 # Вывод результатов
 # ---------------------------------------------------------------------------
@@ -287,7 +341,8 @@ lines = [
     "",
     SEP,
     f"Pipeline B — ASR Quality (WER)",
-    f"  WER:              {final_wer:.2%}",
+    f"  WER (raw):        {final_wer:.2%}",
+    f"  WER (word2num):   {final_wer_norm:.2%}  ← digit↔word normalized",
     f"  Samples used:     {wer_samples_used} / {len(data)}",
     f"  Hallucinations:   {hallucination_count}  (skipped from WER)",
     f"  Extraction failed:{extraction_failed_count}  (skipped from WER)",

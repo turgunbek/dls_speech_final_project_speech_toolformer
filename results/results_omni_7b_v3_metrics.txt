@@ -1,5 +1,5 @@
 ========================================================
-METRICS REPORT  —  results_omni_7b_v3.json
+METRICS REPORT  —  results/results_omni_7b_v3.json
 Total samples: 511
 ========================================================
 
@@ -29,7 +29,8 @@ Pipeline D (Cascaded: ASR transcript → JSON):
 
 --------------------------------------------------------
 Pipeline B — ASR Quality (WER)
-  WER:              66.74%
+  WER (raw):        66.74%
+  WER (word2num):   56.92%  ← digit↔word normalized
   Samples used:     504 / 511
   Hallucinations:   7  (skipped from WER)
   Extraction failed:0  (skipped from WER)
