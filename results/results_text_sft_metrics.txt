@@ -1,0 +1,44 @@
+========================================================
+METRICS REPORT  —  results/results_text_sft.json
+Total samples: 511
+========================================================
+
+Pipeline A (Text Oracle):
+  Accuracy:      99.61%
+  Precision:     1.000
+  Recall:        0.995
+  FAR:           0.000
+  Parsable rate: 100.00%
+  TP=399  FP=0  FN=2  TN=110
+
+Pipeline C (Direct Audio → JSON):
+  Accuracy:      67.51%
+  Precision:     0.996
+  Recall:        0.589
+  FAR:           0.009
+  Parsable rate: 100.00%
+  TP=236  FP=1  FN=165  TN=109
+
+Pipeline D (Cascaded: ASR transcript → JSON):
+  Accuracy:      70.06%
+  Precision:     1.000
+  Recall:        0.618
+  FAR:           0.000
+  Parsable rate: 100.00%
+  TP=248  FP=0  FN=153  TN=110
+
+--------------------------------------------------------
+Pipeline B — ASR Quality (WER)
+  WER:              67.16%
+  Samples used:     504 / 511
+  Hallucinations:   7  (skipped from WER)
+  Extraction failed:0  (skipped from WER)
+
+--------------------------------------------------------
+SUMMARY
+--------------------------------------------------------
+Modality gap (A vs C):  +32.09%  (direct audio vs text oracle)
+Modality gap (A vs D):  +29.55%  (cascaded vs text oracle)
+C vs D gap:             -2.54%
+
+WINNER: Pipeline D (Cascaded) outperforms C by 2.54% accuracy.

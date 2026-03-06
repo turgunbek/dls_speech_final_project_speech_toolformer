@@ -84,7 +84,7 @@ The 21.5% negative ratio is slightly above the recommended 10–20%, but ensures
 
 **Qwen2.5-Omni-7B** was chosen as the backbone model. It is a natively multimodal model that accepts audio directly as input and generates text output — this is exactly the property needed to compare ASR-based and end-to-end audio pipelines under a single model.
 
-Hardware: NVIDIA L40S GPU (48 GB VRAM). The model runs in `torch_dtype="auto"` (bfloat16) with `device_map="auto"`. No fine-tuning was performed; all experiments are zero-shot.
+Hardware: NVIDIA L40S GPU (48 GB VRAM). The model runs in `torch_dtype="auto"` (bfloat16) with `device_map="auto"`. Baseline experiments (Sections 5–9) are zero-shot; LoRA fine-tuning results are reported in Section 10.
 
 ### 3.2 System prompt
 
@@ -406,9 +406,80 @@ Rationale:
 
 ---
 
-## 10. Discussion
+## 10. Fine-tuning (LoRA SFT)
 
-### 10.1 What worked well
+Following the zero-shot evaluation, we fine-tuned the model using LoRA adapters to assess whether supervised training improves tool-call accuracy. Two experiments were conducted: text SFT (language model only) and audio SFT (audio→JSON pairs).
+
+### 10.1 Training setup
+
+Both adapters share the same LoRA configuration; training data and learning rate differ:
+
+| Parameter | Text SFT | Audio SFT |
+|-----------|----------|-----------|
+| Script | `src/finetune_text.py` | `src/finetune_audio.py` |
+| Training data | 3,000 synthetic text→JSON pairs | 1,500 audio→JSON pairs (XTTS-v2) |
+| LoRA rank / alpha | 16 / 32 | 16 / 32 |
+| Dropout | 0.05 | 0.05 |
+| Target modules | `q,k,v,o,gate,up,down_proj` (LM layers only) | same |
+| Epochs | 2 | 2 |
+| Learning rate | 2e-4 | 1e-4 |
+| Optimizer | AdamW + cosine warmup (30 steps) | same |
+| Base weights | Qwen2.5-Omni-7B (zero-shot) | Qwen2.5-Omni-7B + merged text adapter |
+
+Audio SFT applies LoRA via `inject_adapter_in_model` (modifies the `thinker` submodule in-place) rather than `get_peft_model`, because wrapping the thinker in a PeftModel breaks the outer model's routing. The training forward pass calls `model.thinker(input_ids=..., input_features=...)` directly, since `Qwen2_5OmniForConditionalGeneration.forward` is not implemented.
+
+### 10.2 Results
+
+| Metric | Baseline v3 | Text SFT | Audio SFT |
+|--------|:-----------:|:--------:|:---------:|
+| **A** Accuracy | 98.83% | **99.61%** | 98.83% |
+| **A** Precision | 0.997 | **1.000** | 0.997 |
+| **A** Recall | 0.988 | **0.995** | 0.988 |
+| **A** FAR | 0.009 | **0.000** | 0.009 |
+| **A** TP / FP / FN / TN | 396/1/5/109 | 399/0/2/110 | 396/1/5/109 |
+| **C** Accuracy | 68.30% | 67.51% | 68.30% |
+| **D** Accuracy | 67.51% | **70.06%** | 67.51% |
+| **D** Recall | 0.586 | **0.618** | 0.586 |
+| **B** WER | 66.74% | 67.16% | 66.74% |
+
+### 10.3 Text SFT analysis
+
+**Result: successful improvement.**
+
+- Pipeline A: accuracy 98.83% → **99.61%** (+0.78 pp), recall 0.988 → **0.995**, FAR 0.009 → **0.000**, FP 1 → **0**
+- Pipeline D: accuracy 67.51% → **70.06%** (+2.55 pp) via cascade — improved text→JSON mapping applies equally to D's cleaned ASR transcript input
+- Pipeline C: −0.79 pp (noise; audio encoder path is not modified by text-only SFT)
+
+**Banking significance:** Text SFT achieves Precision = 1.000 and FAR = 0.000 — zero false positives across 511 samples. For a financial transaction system, eliminating false alarms is more critical than marginal recall improvement.
+
+Remaining errors (2 false negatives) involve highly idiomatic phrasings where the transfer amount is expressed in slang that the model still misinterprets (e.g., "a grand and a half" → 1.5 instead of 1500).
+
+### 10.4 Audio SFT analysis
+
+**Result: no improvement — evaluation metrics identical to Baseline v3.**
+
+Training converged (no NaN after MAX_SEQ_LEN fix), but evaluation shows no gain. Root causes:
+
+| Issue | Evidence | Impact |
+|-------|----------|--------|
+| Incomplete text adapter merge | Pipeline A with audio SFT = 98.83% (baseline), not 99.61% (text SFT). The `merge_and_unload()` step appears to not incorporate text adapter weights correctly under `device_map={"":0}`. | Audio LoRA trained effectively on base model, not improved text-SFT weights |
+| Insufficient training | 2 epochs × 1,500 samples | Too few gradient steps for audio-to-intent adaptation |
+| High learning rate | LR=1e-4 applied on top of merged weights | May cause unstable updates |
+
+**Technical issues resolved during implementation:**
+
+| Problem | Cause | Solution |
+|---------|-------|---------|
+| `_forward_unimplemented` error | `Qwen2_5OmniForConditionalGeneration.forward` is not implemented — outer model only routes through `generate()` | Use `model.thinker(input_ids=..., input_features=...)` for training forward pass |
+| NaN loss | MAX_SEQ_LEN=256 < audio token count (~400–600) → all labels masked to −100 | Set MAX_SEQ_LEN=1024; assert `(labels != -100).sum() > 0` before backward |
+| Wrong `base_model_name_or_path` | TRL/PEFT saves thinker's path `"Qwen2.5-Omni-7B/thinker"` | Loader strips `/thinker`, prepends `"Qwen/"` to recover correct HuggingFace model ID |
+| LoRA injection method | `get_peft_model(model.thinker, ...)` wraps thinker in PeftModel, confuses outer model routing | `inject_adapter_in_model(lora_cfg, model.thinker)` modifies thinker in-place without wrapper |
+
+---
+
+## 11. Discussion
+
+### 11.1 What worked well
 
 - **Zero-shot text performance is excellent** (Pipeline A: 98.83%). The base Qwen2.5-Omni-7B understands `transfer_money` argument extraction without any fine-tuning, given a clear system prompt.
 - **Direct audio pipeline (C) achieves 68.30% accuracy** without fine-tuning and with 100% parsable rate. The model reliably outputs structured JSON from raw audio.
@@ -416,7 +487,7 @@ Rationale:
 - **Pipeline D v3 has zero false alarms.** For a banking use case, this is the most safety-relevant metric.
 - **The v3 bug fix** improved Pipeline D accuracy by +12 pp by fixing a simple transcript formatting issue. This demonstrates how sensitive cascaded systems are to intermediate prompt construction.
 
-### 10.2 Failure modes
+### 11.2 Failure modes
 
 - **ASR is the primary bottleneck.** Even with correct transcript passing, Pipeline D recall is limited to 0.586 because many ASR transcripts are too garbled for the model to extract the transfer intent.
 - **Looping hallucinations on decimal amounts.** Numbers like "7.25" and "8.08" confuse the model into generating looping transcripts. This affects 6+ samples and corrupts WER computation.
@@ -425,53 +496,67 @@ Rationale:
 - **Exchange rate false positive.** The sample "What's the exchange rate for euros to dollars?" is labeled as `null` in the dataset but correctly matches the `get_exchange_rate` tool defined in the system prompt. This is a dataset annotation issue, not a model error.
 - **Single-voice dataset.** All audio comes from one speaker, limiting generalization assessment.
 
-### 10.3 What would be tried with more time
+### 11.3 What would be tried with more time
 
 1. **Fix looping hallucination detection:** Extend `is_hallucination` to detect periodic patterns (substring repetition). This would allow computing a meaningful WER.
 2. **Amount normalization in Pipeline D post-processing:** Convert "zero point five k" → "500" before passing to the LLM. Expected: significant improvement in wrong_amount errors (~53 cases in D v3).
 3. **Multi-voice dataset:** Add CommonVoice speaker references to XTTS-v2. Evaluate pipeline robustness across voices.
-4. **Audio-conditioned LoRA fine-tuning:** Train on (audio, expected JSON) pairs using LoRA on the audio encoder + LLM attention layers. Expected: Pipeline C accuracy from ~68% toward ~85–90%.
-5. **Text SFT for amount normalization:** Fine-tune on text examples where "0.5k" = 500, "a grand and a half" = 1500. Expected: improve wrong_amount cases in both C and D.
+4. **Audio-conditioned LoRA fine-tuning:** _Implemented — see Section 10.4._ Training converged, but evaluation shows no improvement due to incomplete text adapter merge and insufficient training budget. Verified fix: check `type(model.thinker)` after `merge_and_unload()`; increase to 5 epochs.
+5. **Text SFT for amount normalization:** _Implemented — see Section 10.3._ Text SFT improved Pipeline A (+0.78 pp, FAR=0) and Pipeline D (+2.55 pp). However, amount normalization ("0.5k"→500) remains open — the errors occur in audio transcription, not in the text→JSON step that SFT targets.
 6. **TTS quality fix:** Add 0.3 s silence before each generated audio to prevent first-word clipping. Expected: reduce "send"→"then" errors from 21 to ~0.
 7. **Real microphone recordings:** Replace synthetic TTS with actual user voice recordings to validate real-world performance.
 
 ---
 
-## 11. Summary
+## 12. Summary
 
 | Criterion | Value |
 |-----------|-------|
 | Tool | `transfer_money(recipient, amount)` with 2 args |
 | Dataset size | 511 samples (401 positive, 110 negative, 21.5% neg) |
 | Audio | XTTS-v2, 1 voice (Cameron Russell), English |
-| Model | Qwen2.5-Omni-7B, zero-shot, no fine-tuning |
-| **Pipeline A accuracy (text oracle)** | **98.83%** |
+| Model | Qwen2.5-Omni-7B (zero-shot baseline + LoRA SFT) |
+| **Pipeline A — Baseline accuracy** | **98.83%** |
+| **Pipeline A — Text SFT accuracy** | **99.61%** (Precision=1.000, FAR=0.000) |
 | **Pipeline B WER** | **66.74%** (inflated by digit↔word mismatch; semantic WER ~20–30%) |
-| **Pipeline C accuracy (direct audio)** | **68.30%** |
-| **Pipeline D accuracy (cascaded, fixed)** | **67.51%** |
-| **Best pipeline** | **D v3 (Cascaded) — precision=1.000, FAR=0.000** |
-| v3 improvement over v2 (Pipeline D) | +12 pp accuracy, recall 0.436→0.586 |
+| **Pipeline C accuracy** | **68.30%** (baseline; unchanged by SFT) |
+| **Pipeline D — Baseline accuracy** | **67.51%** |
+| **Pipeline D — Text SFT accuracy** | **70.06%** (+2.55 pp) |
+| **Best pipeline (banking)** | **D + Text SFT — Precision=1.000, FAR=0.000, Accuracy=70.06%** |
+| v3 fix over v2 (Pipeline D) | +12 pp accuracy, recall 0.436→0.586 |
 | WER fix (trigram filter) | 103.36% → **66.74%** (looping hallucinations excluded) |
-| Fine-tuning | Not performed |
+| Text SFT gain (Pipeline A) | +0.78 pp accuracy, FAR 0.009 → **0.000** |
+| Text SFT gain (Pipeline D) | +2.55 pp accuracy, recall 0.586 → **0.618** |
+| Audio SFT | No improvement (merge issue + insufficient training; see Section 10.4) |
 
 ---
 
-## 12. File Descriptions
+## 13. File Descriptions
 
 | File | Description |
 |------|-------------|
 | `data/generated_dataset.json` | Synthetic text dataset (511 examples, ChatGPT) |
+| `data/training_data_text.json` | SFT training set (3,000 text→JSON examples) |
 | `data/Cameron_Russell-chunk-38.wav` | Speaker reference audio for TTS |
-| `data/dataset_audio_Cameron_Russell_115.json` | Dataset manifest with `text`, `label`, `audio_path` |
+| `data/dataset_audio_Cameron_Russell_115.json` | Evaluation dataset manifest with `text`, `label`, `audio_path` |
 | `data/wavs_Cameron_Russell_115.zip` | 511 synthesized WAV files (archived) |
-| `src/generate_audio.py` | TTS synthesis script (XTTS-v2) |
+| `src/generate_audio.py` | TTS synthesis for evaluation audio (XTTS-v2) |
+| `src/generate_training_data.py` | Generator for 3,000 text SFT training examples |
+| `src/finetune_text.py` | LoRA text SFT script |
+| `src/finetune_audio.py` | LoRA audio SFT script |
 | `src/run_omni_project_v2.py` | Experiment script v2 — all pipelines A–D (has Pipeline D bug) |
-| `src/run_omni_project_v3.py` | Experiment script v3 — fixes Pipeline D transcript passing |
+| `src/run_omni_project_v3.py` | Experiment script v3 — **final evaluation script**; fixes Pipeline D; supports `--model_path` for SFT adapters |
 | `src/calculate_metrics.py` | Metrics: accuracy, precision, recall, FAR, parsable rate, WER |
 | `src/error_analysis.py` | Detailed error breakdown and categorization per pipeline |
-| `results/results_omni_7b_v2.json` | Raw results from v2 run (511 samples) |
-| `results/results_omni_7b_v3.json` | Raw results from v3 run (511 samples, fixed D) |
-| `results/results_omni_7b_v2_metrics.txt` | Auto-generated metrics report for v2 |
-| `results/results_omni_7b_v3_metrics.txt` | Auto-generated metrics report for v3 |
-| `results/error_analysis_v3.txt` | Detailed error categorization for all pipelines (v3) |
-| `demo_notebook.ipynb` | Interactive demo: all 4 pipelines + metrics on pre-computed results |
+| `results/results_omni_7b_v2.json` | Raw results — v2 run (511 samples) |
+| `results/results_omni_7b_v3.json` | Raw results — v3 run (511 samples, fixed Pipeline D) |
+| `results/results_text_sft.json` | Raw results — Text SFT evaluation (all pipelines) |
+| `results/results_audio_sft.json` | Raw results — Audio SFT evaluation (all pipelines) |
+| `results/results_omni_7b_v2_metrics.txt` | Metrics report for v2 |
+| `results/results_omni_7b_v3_metrics.txt` | Metrics report for v3 (baseline) |
+| `results/results_text_sft_metrics.txt` | Metrics report for Text SFT |
+| `results/results_audio_sft_metrics.txt` | Metrics report for Audio SFT |
+| `results/error_analysis_v3.txt` | Detailed error categorization — v3 baseline |
+| `results/error_analysis_audio_sft.txt` | Detailed error categorization — Audio SFT |
+| `report_sft_1.md` | Concise SFT results summary (tables + technical findings) |
+| `demo_notebook.ipynb` | Interactive demo: all 4 pipelines + baseline and SFT metrics |

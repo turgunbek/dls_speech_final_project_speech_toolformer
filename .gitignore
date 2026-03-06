@@ -4,13 +4,22 @@ data/tmp/
 wavs_Cameron_Russell_115/
 __pycache__/
 
+# --- Fine-tuning: веса и аудио (слишком большие для git) ---
+checkpoints/
+data/wavs_training/
+data/training_audio_manifest.json
+
 # --- Игнорируемые файлы ---
-current_state_review.md
-md_from_pdf.md
 speech_toolformer.pdf
+Тема проекта.md
+md_from_pdf.md
+current_state_review.md
 terminal_commands.txt
 TODO.md
-Тема проекта.md
+plan_to_finetune.md
+plan_after_finetune.md
+report_sft_1.md
+
 
 # Системные файлы (на всякий случай)
 .DS_Store

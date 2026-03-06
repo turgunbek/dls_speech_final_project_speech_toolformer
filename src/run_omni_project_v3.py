@@ -21,6 +21,7 @@ run_omni_project_v3.py
 import os
 os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 
+import argparse
 import torch
 import json
 import re
@@ -34,11 +35,23 @@ from transformers import (
 from qwen_omni_utils import process_mm_info
 
 
-# === НАСТРОЙКИ ===
-MODEL_ID    = "Qwen/Qwen2.5-Omni-7B"
-INPUT_FILE  = "data/dataset_audio_Cameron_Russell_115.json"
-OUTPUT_FILE = "results/results_omni_7b_v3.json"
-# =================
+# === АРГУМЕНТЫ КОМАНДНОЙ СТРОКИ ===
+parser = argparse.ArgumentParser(description="Run Qwen2.5-Omni pipelines for banking tool-call evaluation")
+parser.add_argument("--model_path",  default="Qwen/Qwen2.5-Omni-7B",
+                    help="HuggingFace model ID or local path")
+parser.add_argument("--input_file",  default="data/dataset_audio_Cameron_Russell_115.json",
+                    help="Path to dataset JSON")
+parser.add_argument("--output_file", default="results/results_omni_7b_v3.json",
+                    help="Path to output JSON")
+parser.add_argument("--pipelines",   default="A,B,C,D",
+                    help="Comma-separated list of pipelines to run: A,B,C,D")
+args = parser.parse_args()
+
+MODEL_ID    = args.model_path
+INPUT_FILE  = args.input_file
+OUTPUT_FILE = args.output_file
+PIPELINES   = set(p.strip().upper() for p in args.pipelines.split(","))
+# ==================================
 
 
 # ---------------------------------------------------------------------------
@@ -47,13 +60,37 @@ OUTPUT_FILE = "results/results_omni_7b_v3.json"
 
 print(f"Loading {MODEL_ID}...")
 
-model = Qwen2_5OmniForConditionalGeneration.from_pretrained(
-    MODEL_ID,
-    torch_dtype="auto",
-    device_map="auto",
-)
+_is_adapter = os.path.isfile(os.path.join(MODEL_ID, "adapter_config.json"))
 
-processor = Qwen2_5OmniProcessor.from_pretrained(MODEL_ID)
+if _is_adapter:
+    # LoRA-адаптер: читаем базовую модель из adapter_config.json
+    with open(os.path.join(MODEL_ID, "adapter_config.json")) as _f:
+        _base_model_id = json.load(_f)["base_model_name_or_path"]
+    # Фикс: training-фреймворк сохраняет путь к тинкеру "Qwen2.5-Omni-7B/thinker"
+    # вместо полного "Qwen/Qwen2.5-Omni-7B" — восстанавливаем корректный ID
+    if _base_model_id is None:
+        _base_model_id = "Qwen/Qwen2.5-Omni-7B"
+    elif _base_model_id.endswith("/thinker"):
+        _base_model_id = "Qwen/" + _base_model_id[: -len("/thinker")]
+    print(f"  Detected PEFT adapter. Base model: {_base_model_id}")
+    from peft import PeftModel
+    _base = Qwen2_5OmniForConditionalGeneration.from_pretrained(
+        _base_model_id,
+        torch_dtype="auto",
+        device_map="auto",
+        local_files_only=True,
+    )
+    # LoRA обучалась на thinker-подмодуле → применяем туда же
+    _base.thinker = PeftModel.from_pretrained(_base.thinker, MODEL_ID)
+    model = _base
+    processor = Qwen2_5OmniProcessor.from_pretrained(MODEL_ID)
+else:
+    model = Qwen2_5OmniForConditionalGeneration.from_pretrained(
+        MODEL_ID,
+        torch_dtype="auto",
+        device_map="auto",
+    )
+    processor = Qwen2_5OmniProcessor.from_pretrained(MODEL_ID)
 
 
 # ---------------------------------------------------------------------------
@@ -201,67 +238,73 @@ print("Smoke-test:", generate_omni(_test_conv))
 with open(INPUT_FILE, "r", encoding="utf-8") as f:
     dataset = json.load(f)
 
-print(f"\nProcessing {len(dataset)} items with Qwen2.5-Omni-7B (v3)...")
+print(f"\nProcessing {len(dataset)} items | model={MODEL_ID} | pipelines={','.join(sorted(PIPELINES))}")
 
 results = []
 
 for item in tqdm(dataset):
     audio_path = item["audio_path"]
-    if not os.path.exists(audio_path):
-        print(f"  [SKIP] missing file: {audio_path}")
-        continue
-
     ground_truth_text = item["text"]
 
     # ── Pipeline A: TEXT ONLY (Oracle) ────────────────────────────────────
-    conv_a = [
-        {"role": "system", "content": [{"type": "text", "text": SYSTEM_PROMPT}]},
-        {"role": "user",   "content": [{"type": "text", "text": ground_truth_text}]},
-    ]
-    res_a_raw = generate_omni(conv_a)
-    json_a = extract_json(res_a_raw)
+    json_a = None
+    if "A" in PIPELINES:
+        conv_a = [
+            {"role": "system", "content": [{"type": "text", "text": SYSTEM_PROMPT}]},
+            {"role": "user",   "content": [{"type": "text", "text": ground_truth_text}]},
+        ]
+        json_a = extract_json(generate_omni(conv_a))
 
     # ── Pipeline B: ASR  (Audio → Transcript) ─────────────────────────────
-    conv_b = [
-        {"role": "system", "content": [{"type": "text", "text": "You are a helpful assistant."}]},
-        {"role": "user",   "content": [
-            {"type": "audio", "audio": audio_path},
-            {"type": "text",  "text": ASR_PROMPT},
-        ]},
-    ]
-    transcript_b_raw = generate_omni(conv_b)
-    transcript_b_clean = extract_clean_transcript(transcript_b_raw)  # ← НОВОЕ в v3
+    transcript_b_raw   = None
+    transcript_b_clean = None
+    if "B" in PIPELINES or "D" in PIPELINES:
+        if not os.path.exists(audio_path):
+            print(f"  [SKIP audio] missing file: {audio_path}")
+        else:
+            conv_b = [
+                {"role": "system", "content": [{"type": "text", "text": "You are a helpful assistant."}]},
+                {"role": "user",   "content": [
+                    {"type": "audio", "audio": audio_path},
+                    {"type": "text",  "text": ASR_PROMPT},
+                ]},
+            ]
+            transcript_b_raw   = generate_omni(conv_b)
+            transcript_b_clean = extract_clean_transcript(transcript_b_raw)
 
     # ── Pipeline C: DIRECT (Audio → JSON) ─────────────────────────────────
-    conv_c = [
-        {"role": "system", "content": [{"type": "text", "text": SYSTEM_PROMPT}]},
-        {"role": "user",   "content": [
-            {"type": "audio", "audio": audio_path},
-            {"type": "text",  "text": "Extract the intent."},
-        ]},
-    ]
-    res_c_raw = generate_omni(conv_c)
-    json_c = extract_json(res_c_raw)
+    json_c = None
+    if "C" in PIPELINES:
+        if not os.path.exists(audio_path):
+            print(f"  [SKIP audio] missing file: {audio_path}")
+        else:
+            conv_c = [
+                {"role": "system", "content": [{"type": "text", "text": SYSTEM_PROMPT}]},
+                {"role": "user",   "content": [
+                    {"type": "audio", "audio": audio_path},
+                    {"type": "text",  "text": "Extract the intent."},
+                ]},
+            ]
+            json_c = extract_json(generate_omni(conv_c))
 
     # ── Pipeline D: CASCADED (Cleaned Transcript → JSON) ──────────────────
-    # v2-баг: передавали сырой transcript_b (с обёрткой "The original content is: '...'")
-    # v3-фикс: передаём очищенный transcript_b_clean
-    d_input = transcript_b_clean if transcript_b_clean else ground_truth_text + " [ASR FAILED]"
-    conv_d = [
-        {"role": "system", "content": [{"type": "text", "text": SYSTEM_PROMPT}]},
-        {"role": "user",   "content": [{"type": "text", "text": d_input}]},
-    ]
-    res_d_raw = generate_omni(conv_d)
-    json_d = extract_json(res_d_raw)
+    json_d = None
+    if "D" in PIPELINES:
+        d_input = transcript_b_clean if transcript_b_clean else ground_truth_text + " [ASR FAILED]"
+        conv_d = [
+            {"role": "system", "content": [{"type": "text", "text": SYSTEM_PROMPT}]},
+            {"role": "user",   "content": [{"type": "text", "text": d_input}]},
+        ]
+        json_d = extract_json(generate_omni(conv_d))
 
     results.append({
-        "ground_truth":               item.get("label"),
-        "input_text_gt":              ground_truth_text,
-        "pipeline_a_json":            json_a,
-        "pipeline_b_transcript":      transcript_b_raw,       # сырой вывод ASR
-        "pipeline_b_transcript_clean": transcript_b_clean,    # очищенный (для WER и D)
-        "pipeline_c_json":            json_c,
-        "pipeline_d_json":            json_d,
+        "ground_truth":                item.get("label"),
+        "input_text_gt":               ground_truth_text,
+        "pipeline_a_json":             json_a,
+        "pipeline_b_transcript":       transcript_b_raw,
+        "pipeline_b_transcript_clean": transcript_b_clean,
+        "pipeline_c_json":             json_c,
+        "pipeline_d_json":             json_d,
     })
 
 # ---------------------------------------------------------------------------
