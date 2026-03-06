@@ -30,7 +30,7 @@ Zero-shot baseline + LoRA SFT (text и audio) — подробности в [rep
 | Pipeline | Описание | Accuracy | Precision | Recall | FAR |
 |----------|----------|:--------:|:---------:|:------:|:---:|
 | **A** — Text Oracle | GT-текст → JSON | 98.83% | 0.997 | 0.988 | 0.009 |
-| **B** — ASR | Аудио → транскрипт | WER 66.74%¹ | — | — | — |
+| **B** — ASR | Аудио → транскрипт | WER 66.74% / 56.92%¹ | — | — | — |
 | **C** — Direct | Аудио → JSON напрямую | 68.30% | 0.992 | 0.601 | 0.018 |
 | **D** — Cascaded | Аудио → ASR → JSON | 67.51% | **1.000** | 0.586 | **0.000** |
 
@@ -45,7 +45,7 @@ Zero-shot baseline + LoRA SFT (text и audio) — подробности в [rep
 | **D** — Cascaded | 67.51% | **70.06%** | 67.51% |
 | **D** Recall | 0.586 | **0.618** | 0.586 |
 
-¹ WER завышен из-за digit↔word mismatch ("1500" vs "fifteen hundred"); семантический WER ~20–30%.
+¹ WER (raw) 66.74%; после нормализации числительных (`word2number`): **56.92%** — digit↔word mismatch убирает ~10 pp. Остаток (~57%) — реальные ошибки ASR (клиппинг первого слова, фонетические ошибки на именах).
 ² Audio SFT = baseline (merge text adapter + audio LoRA не дал прироста; см. [report.md Section 10.4](report.md)).
 
 **Вывод:** Pipeline D + Text SFT рекомендуется для банкинга — **Precision=1.000, FAR=0.000, Accuracy=70.06%**. Text SFT даёт +0.78 pp на Pipeline A и +2.55 pp на Pipeline D при нулевых ложных вызовах.

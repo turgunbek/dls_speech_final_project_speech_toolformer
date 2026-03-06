@@ -245,6 +245,18 @@ This is a metric artefact, not an ASR quality problem: the model correctly recog
 - Phonetic confusion on short names: "Bro" → "brawl", "Paul" → "pour", "Emma" → "m r"
 - Garbled hallucinations still partially in the evaluation set
 
+**Word-to-number normalization (`word2num`):**
+
+`calculate_metrics.py` was extended with `normalize_numbers_in_text()` (using the `word2number` library) that converts spoken-form numbers to digit form before WER computation — applied to both reference and hypothesis simultaneously, so the metric becomes format-agnostic.
+
+| | Raw WER | word2num WER |
+|---|:---:|:---:|
+| Baseline v3 | 66.74% | **56.92%** |
+| Text SFT | 67.16% | **57.74%** |
+| Audio SFT | 66.74% | **56.92%** |
+
+The ~10 pp reduction confirms that digit↔word mismatch accounts for roughly 10 percentage points of raw WER. The remaining ~57% represents genuine ASR errors: first-word TTS clipping, phonetic confusion on names ("Bro"→"brawl"), and garbled transcripts that narrowly pass the hallucination filter.
+
 ---
 
 ## 7. Results: v3 (Fixed Pipeline D)
@@ -458,7 +470,7 @@ Remaining errors (2 false negatives) involve highly idiomatic phrasings where th
 
 **Result: no improvement — evaluation metrics identical to Baseline v3.**
 
-Training converged (no NaN after MAX_SEQ_LEN fix), but evaluation shows no gain. Root causes:
+Training converged (no NaN after MAX_SEQ_LEN fix), but evaluation shows no gain. Root causes (v1):
 
 | Issue | Evidence | Impact |
 |-------|----------|--------|
@@ -474,6 +486,10 @@ Training converged (no NaN after MAX_SEQ_LEN fix), but evaluation shows no gain.
 | NaN loss | MAX_SEQ_LEN=256 < audio token count (~400–600) → all labels masked to −100 | Set MAX_SEQ_LEN=1024; assert `(labels != -100).sum() > 0` before backward |
 | Wrong `base_model_name_or_path` | TRL/PEFT saves thinker's path `"Qwen2.5-Omni-7B/thinker"` | Loader strips `/thinker`, prepends `"Qwen/"` to recover correct HuggingFace model ID |
 | LoRA injection method | `get_peft_model(model.thinker, ...)` wraps thinker in PeftModel, confuses outer model routing | `inject_adapter_in_model(lora_cfg, model.thinker)` modifies thinker in-place without wrapper |
+
+**Planned fix (Audio SFT v2, `src/finetune_audio_v2.py`):**
+
+A second audio SFT run was prepared with three fixes: (1) merge diagnostics — checks `type(model.thinker)` and runs a 5-sample Pipeline A quick-eval before training to confirm whether the text adapter was actually merged; (2) fallback merge via `merge_adapter() + base_model.model` if `merge_and_unload()` returns a PeftModel wrapper; (3) 5 epochs instead of 2, LR 5e-5 instead of 1e-4. The v2 run was blocked by a server disk space issue at the time of submission; results will be reported in a follow-up.
 
 ---
 
@@ -501,7 +517,7 @@ Training converged (no NaN after MAX_SEQ_LEN fix), but evaluation shows no gain.
 1. **Fix looping hallucination detection:** Extend `is_hallucination` to detect periodic patterns (substring repetition). This would allow computing a meaningful WER.
 2. **Amount normalization in Pipeline D post-processing:** Convert "zero point five k" → "500" before passing to the LLM. Expected: significant improvement in wrong_amount errors (~53 cases in D v3).
 3. **Multi-voice dataset:** Add CommonVoice speaker references to XTTS-v2. Evaluate pipeline robustness across voices.
-4. **Audio-conditioned LoRA fine-tuning:** _Implemented — see Section 10.4._ Training converged, but evaluation shows no improvement due to incomplete text adapter merge and insufficient training budget. Verified fix: check `type(model.thinker)` after `merge_and_unload()`; increase to 5 epochs.
+4. **Audio-conditioned LoRA fine-tuning v2:** _v1 implemented — see Section 10.4. v2 script (`src/finetune_audio_v2.py`) prepared with merge diagnostics, fallback merge, 5 epochs, LR 5e-5._ Blocked by server disk space at submission time; to be completed in a follow-up run.
 5. **Text SFT for amount normalization:** _Implemented — see Section 10.3._ Text SFT improved Pipeline A (+0.78 pp, FAR=0) and Pipeline D (+2.55 pp). However, amount normalization ("0.5k"→500) remains open — the errors occur in audio transcription, not in the text→JSON step that SFT targets.
 6. **TTS quality fix:** Add 0.3 s silence before each generated audio to prevent first-word clipping. Expected: reduce "send"→"then" errors from 21 to ~0.
 7. **Real microphone recordings:** Replace synthetic TTS with actual user voice recordings to validate real-world performance.
@@ -518,7 +534,7 @@ Training converged (no NaN after MAX_SEQ_LEN fix), but evaluation shows no gain.
 | Model | Qwen2.5-Omni-7B (zero-shot baseline + LoRA SFT) |
 | **Pipeline A — Baseline accuracy** | **98.83%** |
 | **Pipeline A — Text SFT accuracy** | **99.61%** (Precision=1.000, FAR=0.000) |
-| **Pipeline B WER** | **66.74%** (inflated by digit↔word mismatch; semantic WER ~20–30%) |
+| **Pipeline B WER** | **66.74%** raw / **56.92%** word2num-normalized (digit↔word mismatch: ~10 pp; true errors: ~57%) |
 | **Pipeline C accuracy** | **68.30%** (baseline; unchanged by SFT) |
 | **Pipeline D — Baseline accuracy** | **67.51%** |
 | **Pipeline D — Text SFT accuracy** | **70.06%** (+2.55 pp) |
