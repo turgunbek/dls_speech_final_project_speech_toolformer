@@ -34,20 +34,21 @@ Zero-shot baseline + LoRA SFT (text и audio) — подробности в [rep
 | **C** — Direct | Аудио → JSON напрямую | 68.30% | 0.992 | 0.601 | 0.018 |
 | **D** — Cascaded | Аудио → ASR → JSON | 67.51% | **1.000** | 0.586 | **0.000** |
 
-### После LoRA Fine-tuning (Text SFT)
+### После LoRA Fine-tuning
 
-| Pipeline | Baseline | Text SFT | Δ |
-|----------|:--------:|:--------:|:-:|
-| **A** — Text Oracle | 98.83% | **99.61%** | +0.78 pp |
-| **A** FAR | 0.009 | **0.000** | −100% |
-| **A** Precision | 0.997 | **1.000** | — |
-| **C** — Direct | 68.30% | 67.51% | ~0 (noise) |
-| **D** — Cascaded | 67.51% | **70.06%** | +2.55 pp |
-| **D** Recall | 0.586 | **0.618** | +0.032 |
+| Pipeline | Baseline | Text SFT | Audio SFT² |
+|----------|:--------:|:--------:|:----------:|
+| **A** — Text Oracle | 98.83% | **99.61%** | 98.83% |
+| **A** FAR | 0.009 | **0.000** | 0.009 |
+| **A** Precision | 0.997 | **1.000** | 0.997 |
+| **C** — Direct | 68.30% | 67.51% | 68.30% |
+| **D** — Cascaded | 67.51% | **70.06%** | 67.51% |
+| **D** Recall | 0.586 | **0.618** | 0.586 |
 
 ¹ WER завышен из-за digit↔word mismatch ("1500" vs "fifteen hundred"); семантический WER ~20–30%.
+² Audio SFT = baseline (merge text adapter + audio LoRA не дал прироста; см. [report.md Section 10.4](report.md)).
 
-**Вывод:** Pipeline D + Text SFT рекомендуется для банкинга — **Precision=1.000, FAR=0.000, Accuracy=70.06%**. Text SFT добавляет +0.78 pp на Pipeline A и +2.55 pp на Pipeline D при нулевых ложных вызовах.
+**Вывод:** Pipeline D + Text SFT рекомендуется для банкинга — **Precision=1.000, FAR=0.000, Accuracy=70.06%**. Text SFT даёт +0.78 pp на Pipeline A и +2.55 pp на Pipeline D при нулевых ложных вызовах.
 
 ---
 
